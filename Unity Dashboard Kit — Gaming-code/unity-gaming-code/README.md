@@ -42,7 +42,7 @@ _This is a full list of tasks, that we use in our projects, but not all of them 
 
 ## Flags
 
-We have several useful flags.
+We have several useful flags
 
 * `gulp --open` or `gulp server --open` - run dev server and then open preview in browser
 * `gulp --tunnel=[name]` or `gulp server --tunnel [name]` - runs dev server and allows you to easily share a web service on your local development machine (powered by [localtunnel.me](https://localtunnel.me/)). Your local site will be available at `[name].localtunnel.me`.
@@ -54,3 +54,4 @@ You can also use [npm scripts](https://docs.npmjs.com/misc/scripts):
 * `npm run ghpages` to push only `./dist` folder to **gh-pages** branch on github (very useful for previews).
 * `npm run start` - same as `gulp default`.
 * `npm run build` - same as `gulp build`.
+
