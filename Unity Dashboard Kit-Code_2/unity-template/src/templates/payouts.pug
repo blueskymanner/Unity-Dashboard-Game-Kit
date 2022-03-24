@@ -1,0 +1,126 @@
+---
+title: Payouts
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', 'active', '', '', '', '', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head
+					.page__col
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.h2 Your Payouts
+					.page__col
+						+header
+				.page__row
+					.page__col
+						.widget.widget_shadow
+							.widget__title Choose A Payment Method
+							.payment
+								.payment__row
+									.payment__details
+										.payment__preview.bg-purple-light
+											img.payment__pic(src="img/figure-5.png" alt="")
+										.payment__mail.title payout@ui8.net
+										.payment__info.caption-sm Your selected payout method was confirmed on Feb 24, 2019.
+										.payment__logo
+											img.payment__pic(src="img/paypal.png" alt="")
+									.payment__variants
+										label.payment__label
+											input.payment__radio(type="radio" name="payment" checked)
+											span.payment__in
+												span.payment__tick
+												span.payment__desc
+													span.payment__logo
+														img.payment__pic(src="img/paypal.png" alt="")
+													span.payment__info.caption-sm Your Paypal account has been authorized for payouts.
+													button.payment__btn.btn.btn_gray Deauthorize
+										label.payment__label
+											input.payment__radio(type="radio" name="payment" )
+											span.payment__in
+												span.payment__tick
+												span.payment__desc
+													span.payment__logo
+														img.payment__pic.payment__pic_black(src="img/payoneer.png" alt="")
+														img.payment__pic.payment__pic_white(src="img/payoneer-white.png" alt="")
+					.page__col
+						.widget.widget_empty.widget_stat.widget_pt0.widget_responsive
+							.widget__row
+								.widget__col
+									.widget__chart.widget__chart_earning-month
+											div#chart-users-blue
+								.widget__col
+									.widget__title Your earning this month
+									.widget__counter.title.title_md.color-purple 479.4
+									.widget__text.widget__text_mb32 Update your payout method in Settings
+									button.widget__btn.btn.btn_purple.btn_wide Withdraw All Earning
+				.page__content.page__content_pt64
+					.page__stat
+						.page__title.h6 Withdraw History
+						.sorting
+							.sorting__row
+								.sorting__col
+									.sorting__dropdowns
+										+dropdown('Last 30 days')
+										+dropdown('Aug 2020')
+								.sorting__col
+									.sorting__line
+										.sorting__search
+											button.sorting__open
+												+i('search')
+											input.sorting__input(type="text" placeholder="Search")
+										.sorting__actions
+											button.sorting__action
+												+i('edit')
+											button.sorting__action
+												+i('box')
+						.products.products_history
+							.products__table
+								.products__row.products__row_head
+									.products__cell
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+									.products__cell Transaction
+									.products__cell Payout Method
+									.products__cell Stattus
+									.products__cell Date Processed
+									.products__cell Fees
+								mixin row(checked)
+									.products__row
+										.products__cell
+											label.checkbox
+												if checked
+													input.checkbox__input(type="checkbox" checked)
+												else
+													input.checkbox__input(type="checkbox")
+												span.checkbox__in
+													span.checkbox__tick
+										.products__cell
+											.products__price.title $2,932.9
+											.products__transaction.caption.color-gray $25.00 transaction fee
+										.products__cell Paypal
+										.products__cell
+											.products__status.caption.bg-green Paid
+										.products__cell.color-gray 17 Aug 2020
+										.products__cell.color-red $3.49
+									.products__body
+										.products__bg.bg-green
+										.products__line
+											.products__col.color-gray 17 Aug 2020
+											.products__col Paypal
+											.products__col.color-red $3.49
+								+row('')
+								+row('')
+								+row('')
+								+row('')
+								+row('')
+							.products__more
+								button.products__btn.btn.btn_black Load More
+
+
+
+
+

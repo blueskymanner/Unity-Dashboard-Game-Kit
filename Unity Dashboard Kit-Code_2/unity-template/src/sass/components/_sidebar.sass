@@ -1,0 +1,573 @@
+.sidebar
+	position: fixed
+	top: 0
+	left: 0
+	flex-shrink: 0
+	width: 256px
+	height: 100vh 
+	padding: 140px 0 72px
+	background: $wh
+	border-right: 1px solid $border 
+	+d
+		padding-top: 96px
+		overflow: hidden
+		transition: width .25s, transform .25s
+	+t
+		z-index: 10
+		width: 96px 
+	+m
+		width: 256px
+		transform: translateX(-100%)
+	&__wrapper
+		max-height: 100% 
+		padding: 0 20px 30px
+		overflow-y: auto 
+		-ms-overflow-style: none
+		scrollbar-width: none
+		-webkit-overflow-scrolling: touch
+		+m
+			padding: 20px 
+		&::-webkit-scrollbar
+			display: none
+	&__inner
+		width: 215px
+		overflow: hidden
+		transition: width .25s
+		+t
+			width: 56px 
+		+m
+			width: 100% 
+	&__top
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 140px
+		+d
+			justify-content: stretch 
+			height: 96px
+			padding-left: 40px
+			transition: all .25s 
+		+t
+			padding: 0
+		+m
+			padding-left: 40px
+			border-bottom: 1px solid $border 
+	&__logo
+		font-size: 0
+	&__top &__logo
+		+d
+			transition: opacity .2s 
+		+t
+			opacity: 0
+		+m
+			opacity: 1
+	&__logo &__pic
+		width: 176px
+		+d
+			width: 140px
+		&_white
+			display: none
+	&__close
+		position: relative
+		top: -3px
+		display: none
+		margin-right: 25px
+		font-size: 0
+		+m
+			display: inline-block
+		.icon
+			font-size: 20px
+			fill: $text
+	&__wrapper &__logo
+		display: none
+		justify-content: center
+		align-items: center
+		height: 0
+		overflow: hidden
+		margin: 0 -20px 
+		+d
+			display: flex
+		+t
+			height: 80px
+		+m
+			display: none
+	&__burger
+		position: absolute
+		top: 0
+		right: 0
+		display: none
+		width: 96px
+		height: 96px
+		padding: 20px
+		border-bottom: 1px solid transparent 
+		font-size: 0 
+		+d
+			display: inline-block
+		+t
+			border-color: $border 
+		+m
+			display: none
+		&:before,
+		&:after
+			content: ""
+			display: inline-block 
+			width: 32px
+			height: 2px
+			margin: 3px auto 
+			border-radius: 1px
+			background: $bl  
+	&__list
+		margin-bottom: 20px
+		+m
+			margin: 0
+	&__group
+		+nl
+			position: relative
+			margin-bottom: 40px
+			padding-bottom: 30px
+			+m
+				margin-bottom: 20px
+				padding-bottom: 15px
+			&:before
+				content: ""
+				position: absolute
+				left: 20px
+				right: 20px
+				bottom: 0
+				height: 1px 
+				background: #F0F3F6 
+				+d
+					transition: all .25s
+				+t
+					left: -20px
+					right: -20px
+				+m
+					left: 20px
+					right: 20px 
+	&__caption
+		margin-bottom: 16px
+		padding-left: 20px
+		color: $gray-dark
+		+d
+			white-space: nowrap
+			transition: padding .25s 
+		+t
+			padding-left: 0
+			text-align: center
+			span
+				display: none
+		+m
+			padding-left: 20px
+			text-align: left
+			span
+				display: inline
+	&__item
+		display: flex
+		align-items: center
+		height: 56px
+		padding: 0 20px 
+		border-radius: 12px
+		background: transparent 
+		font-size: 14px
+		font-weight: 600
+		color: $gray-dark
+		transition: color .25s
+		transition: all .25s
+		+d
+			position: relative
+			padding-left: 3px
+		+t
+			padding-left: 0
+		+m
+			padding-left: 3px
+		&:hover
+			color: $purple 
+			+t
+				color: $gray-dark 
+		&.active
+			background: $purple
+			color: $wh 
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 24px
+		height: 24px
+		margin-right: 16px
+		font-size: 0
+		+d
+			width: 56px
+			height: 56px
+			margin-right: 0
+			transition: margin .25s 
+		+t
+			margin-right: 21px
+		+m
+			margin-right: 0
+		.icon
+			font-size: 21px
+			fill: $bl
+			opacity: 0.4
+			transition: all .25s 
+			&-message
+				font-size: 19px
+	&__item:hover .icon
+		fill: $purple
+		opacity: 1
+		+t
+			fill: $bl
+			opacity: .4 
+	&__item.active .icon
+		opacity: 1
+		fill: $wh 
+	&__item &__text
+		margin-right: auto
+	&__counter
+		flex-shrink: 0 
+		min-width: 24px
+		margin-left: 10px
+		padding: 0 3px 
+		border-radius: 12px
+		background: $red  
+		text-align: center
+		font-size: 12px
+		line-height: 24px 
+		font-weight: 500
+		color: $wh
+		+d
+			transition: all .25s 
+		+t
+			position: absolute
+			top: 15px
+			left: 22px
+			min-width: 10px
+			height: 10px
+			font-size: 0 
+		+m
+			position: static
+			min-width: 24px
+			height: 24px
+			font-size: 12px
+	&__profile
+		margin-top: 25px
+		+t
+			margin-top: 20px
+		+m
+			display: none
+	&__details
+		position: relative
+		display: none
+		padding: 20px 10px 33px
+		margin-bottom: -15px
+		background: #F7F7F7
+		border-radius: 12px
+		transition: padding .25s, background .25s  
+		+x
+			padding: 10px 10px 25px
+		+t
+			padding: 5px 0 17px
+			background: none  
+		&:before
+			content: ""
+			position: absolute
+			top: 8px
+			left: 50%
+			transform: translateX(-50%) 
+			width: 72px
+			height: 4px
+			border-radius: 2px
+			background: $border
+			+x
+				display: none  
+	&__link
+		display: flex
+		align-items: center
+		height: 56px
+		border-radius: 12px 
+		font-size: 14px
+		font-weight: 600
+		color: $gray-dark
+		transition: all .25s
+		&:hover
+			background: $wh
+			box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04)
+	&__link &__icon
+		width: 50px
+		margin: 0
+		padding-right: 6px
+		text-align: center
+		transition: all .25s
+		+t
+			width: 56px
+			margin-right: 24px
+			padding: 0
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50px
+		height: 56px
+		padding-right: 5px
+		.icon
+			font-size: 19px
+	&__user
+		position: relative
+		z-index: 2
+		display: flex
+		align-items: center
+		padding: 0 20px
+		height: 62px
+		border-radius: 12px 
+		color: $text 
+		cursor: pointer
+		transition: background .25s 
+		&:hover,
+		&.active
+			background: $blue 
+			color: $wh
+			.sidebar__status
+				color: $wh
+			.icon
+				fill: $wh  
+		+d
+			transition: all .25s 
+		+t
+			padding-left: 8px 
+	&__ava
+		flex-shrink: 0
+		width: 40px
+		height: 40px
+		font-size: 0
+	&__ava &__pic
+		width: 100%
+		min-height: 100%
+		border-radius: 50%
+	&__arrow
+		flex-shrink: 0 
+		display: flex
+		justify-content: center
+		align-items: center 
+		width: 24px
+		height: 24px
+		font-size: 0
+		.icon
+			font-size: 16px
+			fill: $text
+	&__desc
+		flex: 0 0 calc(100% - 64px)
+		width: calc(100% - 64px)
+		padding: 0 5px 0 16px 
+	&__man
+		+text-overflow
+		font-size: 14px
+		line-height: (20/14) 
+		font-weight: 600
+	&__status
+		+text-overflow
+		color: $gray-dark
+	&__bottom
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		display: flex
+		align-items: center
+		height: 72px
+		padding: 0 40px 
+		box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.05)
+		+d
+			transition: padding .25s 
+		+t
+			padding: 0 35px 
+		+m
+			padding: 0 40px 
+	.switch
+		margin-right: auto
+	.switch_theme .switch__in
+		+t
+			padding-left: 60px
+		+m
+			padding-left: 56px
+	&__banner
+		position: relative
+		margin-top: 50px
+		padding: 8px 8px 20px
+		border-radius: 16px
+		background: #CFC8FF
+		text-align: center
+		+d
+			display: none
+		&:before
+			content: "" 
+			position: absolute
+			top: 8px
+			left: 8px
+			right: 8px
+			bottom: -8px
+			z-index: -1
+			border-radius: 12px 
+			background: rgba(#CFC8FF, .5)
+		+nl
+			margin-bottom: 40px
+	&__preview
+		margin-bottom: 6px
+		font-size: 0
+	&__banner &__btn
+		min-width: 171px
+		color: $link
+		&:hover
+			color: $purple 
+	&.active
+		+d
+			width: 96px
+		+t
+			width: 256px
+		+m
+			transform: translateX(0)
+	&.active &__inner
+		+d
+			width: 56px
+		+t
+			width: 100% 
+	&.active &__burger
+		+d
+			border-color: $border 
+		+t
+			border-color: transparent 
+	&.active &__top
+		padding: 0
+		+t
+			padding-left: 40px
+	&.active &__top &__logo
+		+d
+			opacity: 0
+		+t
+			opacity: 1
+	&.active &__icon
+		margin-right: 21px
+		+t
+			margin-right: 0
+	&.active &__caption
+		+d
+			padding: 0
+			text-align: center
+			span
+				display: none
+		+t
+			padding: 0 20px
+			text-align: left
+			span
+				display: inline
+		+m
+			padding-left: 15px
+	&.active &__group:before
+		+d
+			left: -20px
+			right: -20px
+		+t
+			left: 20px
+			right: 20px
+	&.active &__wrapper &__logo
+		height: 80px
+		+t
+			height: 0
+	&.active &__item
+		+d
+			padding-left: 0
+		+t
+			padding-left: 3px
+		+m
+			padding-left: 0
+	&.active &__counter
+		+d
+			position: absolute
+			top: 15px
+			left: 22px
+			min-width: 10px
+			height: 10px
+			font-size: 0
+		+t
+			position: static
+			min-width: 24px
+			height: 24px
+			font-size: 12px
+	&.active &__details
+		padding: 5px 0 17px
+		background: none 
+	&.active &__link &__icon
+		width: 56px
+		padding: 0
+	&.active &__user
+		+d
+			padding-left: 8px
+		+t
+			padding: 0 20px 
+	&.active &__bottom
+		+d
+			padding: 0 35px
+			.switch_theme .switch__in
+				padding-left: 60px 
+		+t
+			padding: 0 40px
+			.switch_theme .switch__in
+				padding-left: 56px 
+
++dark
+	.sidebar
+		background: #242731
+		border-color: $border-dark 
+		&__pic_black
+			display: none
+		&__pic_white
+			display: inline-block 
+		&__icon .icon
+			fill: $wh
+		&__item:hover
+			color: $wh 
+		&__group:before
+			background: rgba($border-dark, .1) 
+		&__details
+			background: rgba($border, .04)
+			&:before
+				background: $border-dark
+		&__link:hover
+			background: rgba($border, .04)
+			color: $wh
+			.icon
+				fill: $wh
+				opacity: 1
+		&__man
+			color: $wh
+		&__arrow .icon
+			fill: $wh
+		&__bottom
+			box-shadow: inset 0px 1px 0px rgba($border-dark, .1)
+		&__burger
+			+t
+				border-color: $border-dark 
+			&:before,
+			&:after
+				background: $wh 
+		&__top
+			+m
+				border-color: $border-dark
+		&__close
+			.icon
+				fill: $wh
+		&__btn.btn_white
+			background: $purple
+			color: $wh
+			&:hover
+				background: $bl  
+		&.active .sidebar__burger
+			border-color: $border-dark
+			+t
+				border-color: transparent  
+
+		
+ 

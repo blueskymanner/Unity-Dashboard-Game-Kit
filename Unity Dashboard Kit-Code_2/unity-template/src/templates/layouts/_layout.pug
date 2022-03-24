@@ -1,0 +1,80 @@
+include _mixins
+doctype html
+html(lang="ru")
+	head
+		include _head
+
+	body(class=bodyClass)
+		//- check dark mode
+		script.
+			console.log(localStorage.getItem('darkMode'));
+			if (localStorage.getItem('darkMode') === "on") {
+					document.body.classList.add("dark");
+					document.addEventListener("DOMContentLoaded", function() {
+					  document.querySelector('.js-switch-theme input').checked = true;
+					});
+			}
+
+		block content
+		.popup.mfp-hide#popup-settings
+			form.popup__form
+				.popup__title.h6 Account Settings
+				.popup__tags
+					a.popup__tag.active(href="#") Profile
+					a.popup__tag(href="#") Password
+					a.popup__tag(href="#") Email
+					a.popup__tag(href="#") Notification
+					a.popup__tag(href="#") Settings
+				select.popup__select.mobile-show
+					option Profile
+					option Password
+					option Email
+					option Notification
+					option Settings
+				.popup__user
+					.popup__title.h6.mobile-show Your Profile
+					.popup__category.caption-sm Your Avatar
+					.popup__line
+						.popup__ava
+							img.popup__pic(src="img/ava.png" alt="")
+						.popup__details
+							.popup__btns
+								.popup__loading
+									input.popup__file(type="file")
+									button.popup__btn.btn.btn_purple Upload New
+								button.popup__btn.btn.btn_gray Delete Avatar
+							.popup__text Avatar help your teammates recognize you in Unity.
+				.popup__fieldset
+					.popup__row
+						.popup__field.field
+							.field__label Your Full Name
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Display Name
+							.field__wrap
+								input.field__input(type="text")
+					.popup__row
+						.popup__field.field
+							.field__label Role
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Location
+							.field__wrap
+								input.field__input(type="text")
+					.popup__row
+						.popup__field.field
+							.field__label Role
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Team
+							.field__wrap
+								input.field__input(type="text")
+					.popup__field.field
+						.field__label Bio
+						.field__wrap
+							textarea.field__textarea
+				button.popup__btn.btn.btn_black(type="submit") Update Profile
+		include ./_scripts

@@ -1,0 +1,213 @@
+---
+title: Campaigns
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', 'active', '', '', '', '', '', '', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head.page__row_border
+					.page__col
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.h2 Campaigns
+					.page__col
+						+header
+				.page__row.page__row_border
+					.page__col
+						.details
+							.details__container
+								.details__title.h6 Active Users right now 💡
+								.details__row
+									.details__col
+										.details__top
+											.details__number.h1 478
+											a.details__line(href="#")
+												.details__preview
+													img.details__pic(src="img/details-pic.png" alt="")
+												.details__info.caption-sm Page views per minute
+										.details__bottom
+											.details__statistics
+												.details__chart.details__chart_activity
+													div#chart-active-users
+												.details__status
+													.details__icon.bg-blue
+														+i('arrow-down-fat')
+													.details__percent.caption-sm.color-blue-dark 6%
+											.details__info.caption-sm Update your payout method in Settings
+									.details__col
+										.details__box
+											.details__chart.details__chart_counter
+												div#chart-users-counter
+											button.details__remove
+												+i('remove')
+								.details__list.details__list_four
+									.details__item
+										.details__head
+											.details__preview.bg-purple
+												img.details__pic(src="img/folder.svg" alt="")
+											.details__text.caption-sm Users
+										.details__counter.h3 36k
+										.details__indicator
+											.details__progress.bg-purple(style="width: 55%;")
+									.details__item
+										.details__head
+											.details__preview.bg-pink
+												img.details__pic(src="img/activity.svg" alt="")
+											.details__text.caption-sm Clicks
+										.details__counter.h3 1m
+										.details__indicator
+											.details__progress.bg-pink(style="width: 52%;")
+									.details__item
+										.details__head
+											.details__preview.bg-blue
+												img.details__pic(src="img/bag.svg" alt="")
+											.details__text.caption-sm Sales
+										.details__counter.h3 327$
+										.details__indicator
+											.details__progress.bg-blue(style="width: 55%;")
+									.details__item
+										.details__head
+											.details__preview.bg-red
+												img.details__pic(src="img/chat.svg" alt="")
+											.details__text.caption-sm Items
+										.details__counter.h3 68
+										.details__indicator
+											.details__progress.bg-red(style="width: 68%;")
+						.page__widgets
+							.widget.widget_users.widget_shadow.widget_p0
+								.widget__head
+									.widget__title Users
+								.widget__body
+									.widget__flex
+										.widget__desc
+											.widget__category.caption-sm New Users
+											.widget__number.h4 57m
+											.widget__percent 21.77%
+										.widget__chart.widget__chart_users
+											div#chart-users-blue
+									.widget__flex
+										.widget__desc
+											.widget__category.caption-sm New Users
+											.widget__number.h4 36m
+											.widget__percent 21.77%
+										.widget__chart.widget__chart_users
+											div#chart-users-purple
+								.widget__foot
+									a.widget__link.caption(href="#") Go to settings
+							.widget.widget_chart.widget_purple
+								.widget__title.color-white Income
+								.widget__wrap
+									.widget__chart.widget__chart_earning 
+										div#chart-income
+									.widget__btns
+										button.widget__btn.btn.btn_black.btn_wide Withdraw Earnings
+						.page__widgets
+							.widget.widget_shadow
+								.widget__title Icon Progress
+								.quality
+									.quality__list
+										.quality__item.quality__item_chart
+											.quality__preview.bg-pink-opacity
+												img.quality__pic(src="img/figure-1.png" alt="")
+											.quality__details
+												.quality__title.title Unity Comps
+												.quality__info.caption-sm New 3D Kit
+											.quality__chart
+												div#chart-circle-purple
+												.quality__percent.caption-sm 40%
+										.quality__item.quality__item_chart
+											.quality__preview.bg-yellow-opacity
+												img.quality__pic(src="img/figure-2.png" alt="")
+											.quality__details
+												.quality__title.title Folio Designer
+												.quality__info.caption-sm UI Design Kit
+											.quality__chart
+												div#chart-circle-green
+												.quality__percent.caption-sm 62%
+										.quality__item.quality__item_chart
+											.quality__preview.bg-blue-light-opacity
+												img.quality__pic(src="img/figure-3.png" alt="")
+											.quality__details
+												.quality__title.title Folio Agency
+												.quality__info.caption-sm UI Design Kit
+											.quality__chart
+												div#chart-circle-red
+												.quality__percent.caption-sm 75%
+									button.quality__btn.btn.btn_black.btn_wide Discover More
+							.widget.widget_shadow
+								.widget__top
+									.widget__title.mr-auto Latest Sales
+									a.widget__next(href="#")
+										+i('arrow-next-fat')
+								.quality
+									.quality__list
+										.quality__item
+											.quality__preview.bg-pink-opacity
+												img.quality__pic(src="img/figure-1.png" alt="")
+											.quality__details
+												.quality__line
+													.quality__title.title Unity Comps
+													.quality__price.title +$35
+												.quality__info.caption-sm New 3D Kit
+										.quality__item
+											.quality__preview.bg-pink-opacity
+												img.quality__pic(src="img/figure-3.png" alt="")
+											.quality__details
+												.quality__line
+													.quality__title.title Unity Comps
+													.quality__price.title +$35
+												.quality__info.caption-sm New 3D Kit
+										.quality__item
+											.quality__preview.bg-blue-opacity
+												img.quality__pic(src="img/figure-5.png" alt="")
+											.quality__details
+												.quality__line
+													.quality__title.title Unity Comps
+													.quality__price.title +$35
+												.quality__info.caption-sm New 3D Kit
+									button.quality__btn.btn.btn_purple.btn_wide Show all reports
+					.page__col
+						.page__group
+							.widget.widget_shadow
+								.widget__title 2020 Goal
+								.goal
+									.goal__container
+										.goal__slider.owl-carousel.js-slider-goal
+											.goal__preview
+												img.goal__pic(src="img/figure-1.png" alt="")
+												.goal__bg.bg-blue-light
+											.goal__preview
+												img.goal__pic(src="img/figure-2.png" alt="")
+												.goal__bg.bg-pink
+									.goal__list
+										.goal__item
+											.goal__head
+												.goal__title.title Bento Illustration
+												.goal__percent.title 40%
+											.goal__indicator
+												.goal__progress.bg-purple(style="width: 40%;")
+										.goal__item
+											.goal__head
+												.goal__title.title Bento Illustration
+												.goal__percent.title 25%
+											.goal__indicator
+												.goal__progress.bg-green(style="width: 25%;")
+										.goal__item
+											.goal__head
+												.goal__title.title Bento Illustration
+												.goal__percent.title 50%
+											.goal__indicator
+												.goal__progress.bg-yellow(style="width: 50%;")
+										.goal__item
+											.goal__head
+												.goal__title.title Bento Illustration
+												.goal__percent.title 80%
+											.goal__indicator
+												.goal__progress.bg-pink(style="width: 80%;")
+							.widget.widget_empty.widget_p0
+								.widget__title Affiliate Impressions
+								.widget__chart.widget__chart_impressions
+									div#chart-affiliate-impressions
+
+

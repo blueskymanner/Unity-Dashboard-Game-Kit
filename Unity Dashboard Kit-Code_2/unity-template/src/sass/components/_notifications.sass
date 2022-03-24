@@ -1,0 +1,172 @@
+.notifications
+	position: relative
+	+m
+		position: static
+	&__open
+		position: relative
+		width: 48px
+		height: 48px
+		border-radius: 50% 
+		font-size: 0
+		transition: all .25s
+		+m
+			width: 40px
+			height: 40px
+			box-shadow: 0 5px 10px rgba(#E3E6EC, .6)
+		.icon
+			font-size: 24px
+			fill: $bl
+			transition: fill .25s
+			+m
+				font-size: 20px 
+		&:hover
+			box-shadow: 0 5px 10px rgba(#E3E6EC, .6)
+	&__counter
+		position: absolute
+		top: 0
+		right: -12px
+		display: inline-block
+		min-width: 24px
+		line-height: 24px
+		border-radius: 50%
+		background: $red
+		font-size: 12px
+		font-weight: 600
+		color: $wh 
+		+m
+			top: 5px
+			right: 5px
+			min-width: 12px
+			height: 12px
+			font-size: 0 
+	&__wrap
+		position: absolute
+		top: calc(100% + 24px)
+		right: -12px
+		width: 360px
+		padding: 32px 8px 36px 
+		box-shadow: 0 10px 36px rgba(#E3E6EC, .6)
+		background: $wh 
+		border-radius: 24px 
+		visibility: hidden
+		opacity: 0
+		transition: all .25s 
+		+m
+			top: calc(100% + 1px)
+			right: 0
+			left: 0
+			width: auto 
+			padding: 24px 16px
+			box-shadow: 0 30px 30px rgba($bl, .3)   
+	&__info
+		margin-bottom: 32px
+		padding: 0 24px 
+		+m
+			margin-bottom: 16px
+			padding: 0
+	&__list
+		margin-bottom: 32px
+		+m
+			margin-bottom: 24px
+	&__item
+		display: flex
+		align-items: center
+		padding: 16px 28px 16px 20px
+		border-radius: 12px
+		background: transparent 
+		cursor: pointer
+		transition: background .25s
+		+m
+			padding: 0 
+		&:hover
+			background: $purple 
+			+m
+				background: none 
+		+nl
+			+m
+				margin-bottom: 20px
+	&__ava
+		position: relative
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 24px
+		font-size: 0
+		+m
+			margin-right: 16px
+	&__ava > &__pic
+		width: 100%
+		min-height: 100%  
+		border-radius: 50%
+	&__status
+		position: absolute
+		top: 0
+		right: -1px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 21px
+		height: 21px
+		border: 2px solid $wh
+		border-radius: 50%
+		font-size: 0
+	&__status &__pic
+		max-width: 10px
+	&__details
+		flex-grow: 1
+	&__line
+		display: flex
+		margin-bottom: 6px
+	&__user
+		margin-right: auto
+		color: $text
+		transition: color .25s  
+	&__time,
+	&__text
+		color: $gray-light
+		transition: color .25s 
+	&__time
+		flex-shrink: 0
+		margin-left: 20px 
+	&__project
+		padding-left: 5px
+		color: $link
+		transition: all .25s
+	&__item:hover &__user,
+	&__item:hover &__time,
+	&__item:hover &__text,
+	&__item:hover &__project
+		color: $wh 
+	&__btns
+		text-align: center
+	&__btn
+		min-width: 230px
+	&.active &__open
+		background: $purple
+		box-shadow: 0 5px 10px rgba(#E3E6EC, .6)
+		.icon
+			fill: $wh
+	&.active &__wrap
+		visibility: visible
+		opacity: 1
+
++dark
+	.notifications
+		&__open
+			background: $dark 
+			+m
+				box-shadow: 0 5px 10px rgba(#000, .3)
+			.icon
+				fill: $wh
+			&:hover
+				box-shadow: 0 5px 10px rgba(#000, .3)
+		&__wrap
+			background: $dark
+			box-shadow: 0 10px 40px rgba(#000, .3) 
+			+m
+				box-shadow: 0 30px 30px rgba(#000, .5)
+		&__user
+			color: $wh 
+		&.active .notifications__open
+			box-shadow: 0 5px 10px rgba(#000, .7)
+

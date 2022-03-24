@@ -1,0 +1,254 @@
+.products
+	& > &__title
+		margin-bottom: 16px
+	& > &__info
+		margin-bottom: 20px
+		color: $gray-dark 
+	&__table
+		display: table
+		width: 100%
+		+m
+			display: block
+			margin-top: -72px
+	&__row
+		display: table-row
+		+m
+			display: flex
+			align-items: center
+			padding: 24px 
+		&:not(.products__row_head)
+			+m
+				border-top: 1px solid $border  
+	&__row_head &__cell
+		padding-top: 24px
+		padding-bottom: 24px
+		font-size: 13px
+		line-height: (18/13)
+		font-weight: 500
+		color: $gray-light 
+		+m
+			padding: 0
+	&__cell
+		display: table-cell
+		vertical-align: middle
+		padding-left: 20px
+		padding-top: 32px
+		padding-bottom: 32px
+		border-bottom: 1px solid $border
+		+d
+			padding-left: 15px
+		+m
+			display: block
+			padding: 0
+			border: none 
+		&:first-child
+			width: 20px
+			padding: 0
+			font-size: 0
+			+m
+				margin-right: 24px
+		&:nth-child(n+3)
+			+m
+				display: none 
+	&__item
+		display: inline-flex
+		align-items: center
+		color: $text 
+	&__preview
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 96px
+		height: 72px
+		border-radius: 8px 
+		background: #A0D7E7 
+		font-size: 0
+		+d
+			width: 86px
+			height: 64px
+		+t
+			display: none
+		+m
+			display: block
+			width: 72px
+			height: 55px
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 7px
+			right: 7px
+			height: 8px
+			border-radius: 0 0 8px 8px
+			background: #E7FAFF
+	&__pic
+		max-height: 100% 
+	&__details
+		padding-left: 24px
+		+d
+			padding-left: 16px
+		+t
+			padding: 0
+		+m
+			padding-left: 24px
+	&__cell &__title
+		margin-bottom: 9px
+	&__color
+		display: flex
+		align-items: center
+	&__bg
+		width: 20px
+		height: 20px
+		flex-shrink: 0
+		border-radius: 4px
+		+d
+			border-radius: 50% 
+		+m
+			width: 9px
+			height: 32px
+			margin-right: 31px
+			border-radius: 9px 
+	&__rating
+		color: $gray-dark
+	&__color &__text
+		margin-left: 8px
+		+d
+			display: none
+	&__more
+		padding-top: 40px
+		text-align: center
+		+t
+			padding-top: 32px
+		+m
+			border-top: 1px solid $border 
+			padding: 24px 24px 0
+	&__more &__btn
+		+m
+			min-width: 100% 
+	&__cost
+		position: relative
+		cursor: pointer
+	&__cost &__tooltip
+		position: absolute
+		top: 10%
+		left: 50%
+		transform: translate(-50%,-50%)
+		min-width: 160px
+		padding: 32px 26px
+		background: $wh
+		border-radius: 24px
+		box-shadow: 0 20px 30px rgba(#E3E6EC, .9)
+		visibility: hidden
+		opacity: 0
+		transition: all .2s
+	&__cost:hover &__tooltip
+		visibility: visible
+		opacity: 1
+	&__sale
+		display: flex
+		align-items: center
+		margin-bottom: 8px
+		color: $gray-dark 
+	&__sale &__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 16px
+		height: 16px 
+		margin-right: 8px
+		border-radius: 6px
+	&__sale &__pic
+		max-width: 8px
+	&__progress
+		position: relative
+		width: 100%
+		height: 2px
+		border-radius: 1px
+		background: $border
+		span
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			border-radius: 1px 
+			background: $purple 
+	&__price
+		+nl
+			margin-bottom: 10px
+	&__transaction
+		color: $gray-dark
+	&__status
+		display: inline-block
+		padding: 3px 16px
+		border-radius: 4px 
+		color: $wh 
+	&__body
+		display: none
+		align-items: center
+		margin: 0 24px 24px 
+		padding: 4px 
+		border: 1px solid $border 
+		border-radius: 8px 
+		+m
+			display: flex
+	&__line
+		display: flex
+		align-items: center
+		flex-grow: 1
+	&_main &__money
+		color: $link
+	&_main &__cell:nth-child(2)
+		font-size: 0
+	&_main &__col
+		&:first-child
+			flex: 0 0 30%
+			padding-right: 8px
+		&:nth-child(2)
+			flex: 0 0 44%
+			padding-right: 8px
+		&:nth-child(3)
+			flex: 0 0 26%
+	&_history &__col
+		&:first-child
+			flex: 0 0 42%
+			padding-right: 8px
+		&:nth-child(2)
+			flex: 0 0 32%
+			padding-right: 8px
+		&:nth-child(3)
+			flex: 0 0 26%
+	&_statement &__cell
+		+m
+			display: block
+		&:not(:first-child):not(:nth-child(3))
+			+m
+				display: none
+	&_statement &__col
+		&:first-child
+			flex: 0 0 42%
+			padding-right: 8px
+		&:nth-child(2)
+			flex: 0 0 32%
+			padding-right: 8px
+		&:nth-child(3)
+			flex: 0 0 26%   
+
++dark
+	.products
+		&__row:not(.products__row_head)
+			+m
+				border-color: $border-dark
+		&__cell
+			border-color: $border-dark
+		&__item
+			color: $wh
+		&__body
+			border-color: $border-dark
+		&__more
+			+m
+				border-color: $border-dark 
+		

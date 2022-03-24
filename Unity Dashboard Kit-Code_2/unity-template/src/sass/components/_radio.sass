@@ -1,0 +1,57 @@
+.radio
+	display: inline-block
+	position: relative
+	user-select: none 
+	cursor: pointer
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0 
+	&__in
+		display: flex
+	&__tick
+		position: relative
+		flex: 0 0 20px
+		width: 20px
+		height: 20px
+		border-radius: 50% 
+		background: $border 
+		transition: all .25s
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 10px
+			height: 10px
+			border-radius: 50% 
+			background: $wh
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5)
+			opacity: 0
+			transition: opacity .25s 
+	&__text
+		margin-left: 8px
+		padding-top: 3px
+		font-size: 13px
+		line-height: 1.2
+		color: $gray-dark 
+		transition: color .25s 
+	&:hover &__tick
+		background: $purple
+	&__input:checked + &__in &__tick
+		background: $purple 
+		&:before
+			opacity: 1
+	&__input:checked + &__in &__text
+		color: $text 
+
++dark
+	.radio
+		&__tick
+			background: $border-dark 
+		&__input:checked + .radio__in .radio__text 
+			color: $wh 
+	

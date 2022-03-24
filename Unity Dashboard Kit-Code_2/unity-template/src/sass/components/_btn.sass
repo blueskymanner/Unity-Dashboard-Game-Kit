@@ -1,0 +1,71 @@
+.btn
+	min-width: 166px
+	height: 56px
+	padding: 0 20px
+	border-radius: 16px/16px
+	+fi
+	font-size: 14px
+	line-height: (20/14) 
+	font-weight: 700 
+	transition: all .25s 
+	.icon,
+	&__text
+		display: inline-block
+		vertical-align: middle
+	.icon
+		position: relative
+		top: -2px
+		font-size: 20px
+		+nl
+			margin-right: 10px
+	&_white
+		background: $wh
+		color: $bl 
+		&:hover
+			color: $purple 
+	&_purple
+		background: $purple
+		color: $wh
+		&:hover
+			background: darken($purple, 5)
+	&_blue
+		background: $blue
+		color: $wh
+		&:hover
+			background: darken($blue, 7)
+	&_blue-dark
+		background: $blue-dark
+		color: $wh
+		&:hover
+			background: lighten($blue-dark, 7)
+	&_black
+		background: $bl
+		color: $wh
+		.icon
+			fill: $wh
+		&:hover
+			background: $purple 
+	&_gray
+		background: $border
+		color: $text
+		&:hover
+			background: rgba($border, .5)
+	&_wide
+		min-width: 100% 
+	&[href]
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
++dark
+	.btn
+		&_white
+			background: $dark
+			color: $wh
+			&:hover
+				background: $bl 
+		&_gray
+			background: $border-dark
+			color: $wh
+			&:hover
+				opacity: .8 

@@ -1,0 +1,235 @@
+---
+title: Schedules
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', 'active', '', '', '', '', '', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head
+					.page__col
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.h2 Schedules
+					.page__col
+						+header
+				.page__content
+					.banner
+						.banner__container
+							.banner__preview
+								img.banner__pic(src="img/banner-pic.png" alt="")
+							.banner__wrap
+								.banner__title.h3 Unity Dashboard
+								.banner__text Create Your Product Dashboard in Minutes
+								button.banner__btn.btn.btn_white Create Schedule
+					.schedules
+						.schedules__container
+							.schedules__col
+								.schedules__title.h6 Small Timeline
+								.schedules__list
+									a.schedules__item.active(href="#")
+										.schedules__date.bg-pink-light
+											.schedules__name.caption-sm Mon
+											.schedules__number.h4 20
+										.schedules__details
+											.schedules__category.title Unity UI Kit
+												+i('arrow-right')
+											.schedules__info.caption-sm UI Design
+											.schedules__time.caption 10:00
+									a.schedules__item(href="#")
+										.schedules__date.bg-purple-light
+											.schedules__name.caption-sm Tue
+											.schedules__number.h4 21
+										.schedules__details
+											.schedules__category.title Bento 3D
+												+i('arrow-right')
+											.schedules__info.caption-sm UI Design
+											.schedules__time.caption 11:30
+									a.schedules__item(href="#")
+										.schedules__date.bg-blue-light
+											.schedules__name.caption-sm Wed
+											.schedules__number.h4 22
+										.schedules__details
+											.schedules__category.title Unity UI Kit
+												+i('arrow-right')
+											.schedules__info.caption-sm UI Design
+											.schedules__time.caption 12:00
+									a.schedules__item(href="#")
+										.schedules__date.bg-yellow-light
+											.schedules__name.caption-sm Thu
+											.schedules__number.h4 23
+										.schedules__details
+											.schedules__category.title Unity UI Kit
+												+i('arrow-right')
+											.schedules__info.caption-sm UI Design
+											.schedules__time.caption 10:00
+								button.schedules__btn.btn.btn_blue-dark.btn_wide Add more
+							.schedules__col
+								.schedules__top
+									.schedules__title.h6 Big Timeline
+									.schedules__arrows
+										button.schedules__arrow
+											+i('arrow-left')
+										button.schedules__arrow
+											+i('arrow-right')
+								.schedules__inner
+									.schedules__graphic
+										.schedules__head
+											.schedules__option Aug
+											.schedules__week
+												.schedules__cell
+													.schedules__day.green M
+												.schedules__cell
+													.schedules__day.green T
+												.schedules__cell
+													.schedules__day.active W
+												.schedules__cell
+													.schedules__day Th
+												.schedules__cell
+													.schedules__day.gray Fr
+												.schedules__cell
+													.schedules__day Sa
+										.schedules__body
+											.schedules__grid
+												.schedules__line
+												.schedules__line
+												.schedules__line
+												.schedules__line
+												.schedules__line
+											.schedules__row
+												.schedules__option 08:00
+												.schedules__week
+													.schedules__task.bg-purple(style="width: 33.33%;")
+														.schedules__text Bento 3D Objects
+											.schedules__row
+												.schedules__option 09:00
+												.schedules__week
+													.schedules__task.bg-pink(style="width: 50%; margin-left: 16.66%;")
+														.schedules__text Bento 3D Objects
+											.schedules__row
+												.schedules__option 10:00
+												.schedules__week
+													.schedules__task.bg-blue-light(style="width: 83.33%;")
+														.schedules__text Bento 3D Objects
+											.schedules__row
+												.schedules__option 11:00
+												.schedules__week
+													.schedules__task.bg-purple-light(style="width: 66.66%; margin-left: 16.66%;")
+														.schedules__text Bento 3D Objects
+											.schedules__row
+												.schedules__option 12:00
+												.schedules__week
+													.schedules__task.bg-blue(style="width: 33.33%; margin-left: 33.33%;")
+								.schedules__legend
+									.schedules__status.green Small note
+									.schedules__status.purple Small note
+									.schedules__status.gray Small note
+					.page__flex
+						.widget.widget_shadow
+							.widget__title Icon Progress
+							.quality
+								.quality__list
+									.quality__item.quality__item_chart
+										.quality__preview.bg-blue-light-opacity
+											img.quality__pic(src="img/figure-5.png" alt="")
+										.quality__details
+											.quality__title.title Folio Agency
+											.quality__info.caption-sm UI Design Kit
+										.quality__chart
+											div#chart-circle-yellow
+											.quality__percent.caption-sm 35%
+									.quality__item.quality__item_chart
+										.quality__preview.bg-pink-opacity
+											img.quality__pic(src="img/figure-1.png" alt="")
+										.quality__details
+											.quality__title.title Unity Comps
+											.quality__info.caption-sm New 3D Kit
+										.quality__chart
+											div#chart-circle-purple
+											.quality__percent.caption-sm 40%
+									.quality__item.quality__item_chart
+										.quality__preview.bg-yellow-opacity
+											img.quality__pic(src="img/figure-2.png" alt="")
+										.quality__details
+											.quality__title.title Folio Designer
+											.quality__info.caption-sm UI Design Kit
+										.quality__chart
+											div#chart-circle-green
+											.quality__percent.caption-sm 62%
+									.quality__item.quality__item_chart
+										.quality__preview.bg-blue-light-opacity
+											img.quality__pic(src="img/figure-3.png" alt="")
+										.quality__details
+											.quality__title.title Folio Agency
+											.quality__info.caption-sm UI Design Kit
+										.quality__chart
+											div#chart-circle-red
+											.quality__percent.caption-sm 75%
+								button.quality__btn.quality__btn_mt30.btn.btn_black.btn_wide Discover More
+						.widget.widget_shadow
+							.widget__title Recent Earnings 🔥
+							.tabs
+								.tabs__row
+									.tabs__col
+										a.tabs__item.active(href="#")
+											.tabs__preview.bg-blue
+												img.tabs__pic(src="img/figure-3.png" alt="")
+											.tabs__details
+												.tabs__category.title Collab UI
+													+i('arrow-right')
+												.tabs__info.caption-sm UI Design
+												.tabs__price.caption $64
+										a.tabs__item(href="#")
+											.tabs__preview.bg-pink
+												img.tabs__pic(src="img/figure-1.png" alt="")
+											.tabs__details
+												.tabs__category.title Sapiens
+													+i('arrow-right')
+												.tabs__info.caption-sm UI Design
+												.tabs__price.caption $64
+										a.tabs__item(href="#")
+											.tabs__preview.bg-yellow
+												img.tabs__pic(src="img/figure-2.png" alt="")
+											.tabs__details
+												.tabs__category.title Folio Agency
+													+i('arrow-right')
+												.tabs__info.caption-sm UI Design
+												.tabs__price.caption $64
+									.tabs__col
+										.tabs__chart
+											div#chart-tabs
+										.tabs__desc
+											.tabs__title.title Aug Earning
+											.tabs__date.caption-sm 18 July - 18 Agu
+											button.tabs__btn.btn.btn_black
+												+i('plus-square')
+												span.btn__icon Create New
+								.tabs__nav
+									a.tabs__link(href="#")
+										.tabs__icon
+											+i('bag')
+										.tabs__text Trending
+									a.tabs__link.active(href="#")
+										.tabs__icon
+											+i('overview')
+										.tabs__text Popular
+									a.tabs__link(href="#")
+										.tabs__icon
+											+i('folder')
+										.tabs__text Trending
+									a.tabs__link(href="#")
+										.tabs__icon
+											+i('wallet')
+										.tabs__text Trending
+
+
+
+
+
+
+
+
+
+
+
+

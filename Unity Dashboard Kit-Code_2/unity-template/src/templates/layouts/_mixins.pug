@@ -1,0 +1,342 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='img/sprite.svg#icon-' + name)
+
+mixin sidebar(item1, item2, item3, item4, item5, item6, item7, item8, item9, banner)
+	.sidebar
+		.sidebar__top
+			button.sidebar__close
+				+i('close')
+			a.sidebar__logo(href="index.html")
+				img.sidebar__pic.sidebar__pic_black(src="img/logo.png" alt="")
+				img.sidebar__pic.sidebar__pic_white(src="img/logo-white.png" alt="")
+			button.sidebar__burger
+		.sidebar__wrapper
+			.sidebar__inner
+				a.sidebar__logo(href="index.html")
+					img.sidebar__pic(src="img/logo-sm.png" alt="")
+				.sidebar__list
+					.sidebar__group
+						.sidebar__caption.caption-sm Admin<span> tools</span>
+						.sidebar__menu
+							a.sidebar__item(href="index.html" class=item1)
+								.sidebar__icon
+									+i('overview')
+								.sidebar__text Overview
+							a.sidebar__item(href="products.html" class=item2)
+								.sidebar__icon
+									+i('bag')
+								.sidebar__text Products
+							a.sidebar__item(href="campaigns.html" class=item3)
+								.sidebar__icon
+									+i('chart')
+								.sidebar__text Campaigns
+							a.sidebar__item(href="schedules.html" class=item4)
+								.sidebar__icon
+									+i('discovery')
+								.sidebar__text Schedules
+							a.sidebar__item(href="payouts.html" class=item5)
+								.sidebar__icon
+									+i('wallet')
+								.sidebar__text Payouts
+							a.sidebar__item(href="statement.html" class=item6)
+								.sidebar__icon
+									+i('document')
+								.sidebar__text Statements
+							a.sidebar__item.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in")
+								.sidebar__icon
+									+i('settings')
+								.sidebar__text Settings 
+					.sidebar__group
+						.sidebar__caption.caption-sm Insights
+						.sidebar__menu
+							a.sidebar__item(href="inbox.html" class=item7)
+								.sidebar__icon
+									+i('message')
+								.sidebar__text Inbox
+								.sidebar__counter 18
+							a.sidebar__item(href="notifications.html" class=item8)
+								.sidebar__icon
+									+i('notification')
+								.sidebar__text Notifications
+								.sidebar__counter 2 
+							a.sidebar__item(href="comments.html" class=item9)
+								.sidebar__icon
+									+i('chat')
+								.sidebar__text Comments
+								.sidebar__counter 20
+				if banner
+					.sidebar__banner
+						.sidebar__preview
+							img.sidebar__pic(src="img/sidebar-pic.png" alt="")
+						button.sidebar__btn.btn.btn_white Get Pro Now
+				.sidebar__profile
+					.sidebar__details
+						a.sidebar__link(href='#')
+							.sidebar__icon
+								+i('profile')
+							.sidebar__text Profile
+						a.sidebar__link(href='#')
+							.sidebar__icon
+								+i('logout')
+							.sidebar__text Log out
+					a.sidebar__user(href="#")
+						.sidebar__ava
+							img.sidebar__pic(src="img/ava.png" alt="")
+						.sidebar__desc
+							.sidebar__man Tam Tran
+							.sidebar__status.caption Free account
+						.sidebar__arrow
+							+i('arrows')
+		.sidebar__bottom
+			label.switch.switch_theme.js-switch-theme
+				input.switch__input(type="checkbox")
+				span.switch__in
+					span.switch__box
+					span.switch__icon
+						+i('moon')
+						+i('sun')
+
+mixin header
+	.header
+		button.header__burger
+		.search
+			.search__field
+				input.search__input(type="text" placeholder="Search")
+				button.search__toggle
+					+i('search')
+					+i('close')
+			.search__result
+				.search__info.caption-sm Recent Searches
+				.search__list
+					a.search__item(href="#")
+						.search__preview.bg-pink
+							img.search__pic(src="img/figure-1.png" alt="")
+						.search__text Earning by items
+							+i('arrow-right')
+					a.search__item(href="#")
+						.search__preview.bg-yellow
+							img.search__pic(src="img/figure-4.png" alt="")
+						.search__text This month Statements
+							+i('arrow-right')
+					a.search__item(href="#")
+						.search__preview.bg-blue-light
+							img.search__pic(src="img/figure-3.png" alt="")
+						.search__text How many sales I got…
+							+i('arrow-right')
+				button.search__btn.btn.btn_purple.btn_wide Advance Search
+		button.header__search
+			+i('search')
+		.notifications
+			button.notifications__open
+				+i('bell')
+				span.notifications__counter 2
+			.notifications__wrap
+				.notifications__info.h6 Recent Notification
+				.notifications__list
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-blue
+								img.notifications__pic(src="img/chat.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Sarah Saunders
+								.notifications__time.caption 8h
+							.notifications__text.caption-sm Commented on <span class="notifications__project">Collab Design</span>
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-green
+								img.notifications__pic(src="img/bag.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Glenn Greer
+								.notifications__time.caption 12h
+							.notifications__text.caption-sm Just pushaded <span class="notifications__project">Sapiens Illustration</span>
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-purple
+								img.notifications__pic(src="img/message.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Sarah Saunders
+								.notifications__time.caption 14h
+							.notifications__text.caption-sm Sent you a message 📪 
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-red
+								img.notifications__pic(src="img/heart.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Sarah Saunders
+								.notifications__time.caption 21h
+							.notifications__text.caption-sm Liked <span class="notifications__project">Folio Agency</span>
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-blue
+								img.notifications__pic(src="img/chat.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Sarah Saunders
+								.notifications__time.caption 8h
+							.notifications__text.caption-sm Commented on <span class="notifications__project">Collab Design</span>
+					a.notifications__item(href="notifications.html")
+						.notifications__ava
+							img.notifications__pic(src="img/ava-1.png" alt="")
+							.notifications__status.bg-green
+								img.notifications__pic(src="img/bag.svg" alt="")
+						.notifications__details
+							.notifications__line
+								.notifications__user.caption Glenn Greer
+								.notifications__time.caption 12h
+							.notifications__text.caption-sm Just pushaded <span class="notifications__project">Sapiens Illustration</span>
+				.notifications__btns
+					a.notifications__btn.btn.btn_black(href="notifications.html") See all incoming activity
+		a.header__user(href="#")
+			img.header__pic(src="img/ava.png" alt="")
+
+mixin dropdown(head)
+	.dropdown.js-dropdown
+		.dropdown__head.js-dropdown-head=head
+		.dropdown__body.js-dropdown-body
+			a.dropdown__item(href="#")
+				.dropdown__title.title Bento 3D Kit 
+				.dropdown__info.caption Illustration
+			a.dropdown__item(href="#")
+				.dropdown__title.title Bento 3D Kit 
+				.dropdown__info.caption Illustration
+			a.dropdown__item(href="#")
+				.dropdown__title.title Collab UI Kit 
+				.dropdown__info.caption Coded Template
+
+mixin notification
+	.notification
+		.notification__tags
+			a.notification__tag.active(href="#") Clients
+			a.notification__tag(href="#") Products
+			a.notification__tag(href="#") Administrator
+			a.notification__tag(href="#") Sales
+			a.notification__tag(href="#") Withdrawals
+		.notification__container
+			.notification__title.h6 Recent Notification
+			.notification__list
+				.notification__item
+					.notification__ava
+						img.notification__pic(src="img/ava-1.png" alt="")
+						.notification__status.bg-blue
+							img.notification__pic(src="img/chat.svg" alt="")
+					.notification__details
+						.notification__author.title Glenn Greer
+						.notification__line.caption
+							.notification__category Commented on
+							.notification__info Collab.
+							.notification__time 12h
+						.inbox__text "Love this so much! What tools do you use to create your 3d illustrations?"
+						.actions
+							button.actions__btn
+								+i('comment')
+							button.actions__btn
+								+i('like')
+							button.actions__btn
+								+i('star')
+							button.actions__btn
+								+i('more')
+					.notification__preview.bg-purple-light
+						img.notification__pic(src="img/figure-1.png" alt="")
+				.notification__item
+					.notification__ava
+						img.notification__pic(src="img/ava-1.png" alt="")
+						.notification__status.bg-blue
+							img.notification__pic(src="img/chat.svg" alt="")
+					.notification__details
+						.notification__author.title Glenn Greer
+						.notification__line.caption
+							.notification__category Commented on
+							.notification__info Collab.
+							.notification__time 12h
+						.inbox__text "Love this so much! What tools do you use to create your 3d illustrations?"
+						.actions
+							button.actions__btn
+								+i('comment')
+							button.actions__btn
+								+i('like')
+							button.actions__btn
+								+i('star')
+							button.actions__btn
+								+i('more')
+					.notification__preview.bg-purple-light
+						img.notification__pic(src="img/figure-1.png" alt="")
+				.notification__item
+					.notification__ava
+						img.notification__pic(src="img/ava-2.png" alt="")
+						.notification__status.bg-green
+							img.notification__pic(src="img/bag.svg" alt="")
+					.notification__details
+						.notification__author.title Glenn Greer
+						.notification__line.caption
+							.notification__category Commented on
+							.notification__info Unity Dashboard kit
+							.notification__time 8h
+						.actions
+							button.actions__btn
+								+i('comment')
+							button.actions__btn
+								+i('like')
+							button.actions__btn
+								+i('star')
+							button.actions__btn
+								+i('more')
+					.notification__preview.bg-yellow
+						img.notification__pic(src="img/figure-1.png" alt="")
+				.notification__item
+					.notification__ava
+						img.notification__pic(src="img/ava-1.png" alt="")
+						.notification__status.bg-red
+							img.notification__pic(src="img/heart.svg" alt="")
+					.notification__details
+						.notification__author.title Abbie Rodriquez
+						.notification__line.caption
+							.notification__category liked
+							.notification__info Collab.
+							.notification__time 18h
+						.actions
+							button.actions__btn
+								+i('comment')
+							button.actions__btn
+								+i('like')
+							button.actions__btn
+								+i('star')
+							button.actions__btn
+								+i('more')
+					.notification__preview.bg-blue-light
+						img.notification__pic(src="img/figure-1.png" alt="")
+				.notification__item
+					.notification__ava
+						img.notification__pic(src="img/ava-1.png" alt="")
+						.notification__status.bg-blue
+							img.notification__pic(src="img/chat.svg" alt="")
+					.notification__details
+						.notification__author.title Glenn Greer
+						.notification__line.caption
+							.notification__category Mention you on
+							.notification__info Collab.
+							.notification__time 18h
+						.notification__text Put the comment lines here
+						.actions
+							button.actions__btn
+								+i('comment')
+							button.actions__btn
+								+i('like')
+							button.actions__btn
+								+i('star')
+							button.actions__btn
+								+i('more')
+					.notification__preview.bg-purple-light
+						img.notification__pic(src="img/figure-1.png" alt="")
+			.notification__btns
+				button.notification__btn.btn.btn_black Load More
+

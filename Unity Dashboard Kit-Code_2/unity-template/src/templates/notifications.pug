@@ -1,0 +1,77 @@
+---
+title: Notifications
+---
+extends layouts/_layout
+block content
+	.page.page_other
+		+sidebar('', '', '', '', '', '', '', 'active')
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head.page__row_responsive.page__row_border
+					.page__col
+						.page__hello.h5 Unity Dashboard v.1
+						.page__welcome.h2 Notifications
+					.page__col
+						+header
+				.page__row.page__row_responsive.page__row_border
+					.page__col
+						+notification
+					.page__col
+						.filters
+							.filters__container
+								.filters__item
+									.filters__title.h6 Filter
+									.filters__variants
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Likes
+										label.checkbox
+											input.checkbox__input(type="checkbox" checked)
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Comments
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Mention
+										label.checkbox
+											input.checkbox__input(type="checkbox" checked)
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Followers
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Mention
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+												span.checkbox__text Other
+									.filters__btns
+										button.filters__btn.btn.btn_purple Unselect all
+										button.filters__btn.btn.btn_white Select All
+								.filters__item
+									.filters__title.h6 From
+									.filters__line
+										label.radio
+											input.radio__input(type="radio" name="radio" checked)
+											span.radio__in
+												span.radio__tick
+												span.radio__text Followers
+										label.radio
+											input.radio__input(type="radio" name="radio")
+											span.radio__in
+												span.radio__tick
+												span.radio__text Everyone
+									a.filters__reset(href='#') Reset all filters
+
+
+
+
+
+

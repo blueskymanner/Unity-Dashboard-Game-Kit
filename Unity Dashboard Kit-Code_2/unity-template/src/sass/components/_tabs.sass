@@ -1,0 +1,153 @@
+.tabs
+	&__row
+		display: flex
+		margin: -20px 0 14px -16px
+		+m
+			display: block
+			margin: -20px -16px 
+	&__col
+		&:first-child
+			flex: 0 0 53%
+			width: 53%
+			+m
+				width: 100% 
+		&:nth-child(2)
+			flex: 0 0 47%
+			width: 47%
+			padding-top: 20px
+			+m
+				display: none
+	&__list
+		margin-left: -16px
+	&__item
+		display: flex
+		align-items: center
+		padding: 20px 16px
+		border-radius: 16px
+		color: $text
+		transition: all .25s
+		&:hover
+			color: $purple
+			.icon
+				fill: $purple
+		&.active
+			background: $pink-light 
+			color: $text 
+			.icon
+				fill: $text  
+	&__preview
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 88px
+		height: 80px
+		margin-right: 16px
+		border-radius: 12px 
+		font-size: 0
+		+x
+			display: none
+		+d
+			display: block
+	&__pic
+		max-height: 100% 
+	&__details
+		flex-grow: 1
+	&__category
+		position: relative
+		display: flex
+		align-items: center
+		margin-bottom: 3px
+		padding-right: 20px
+		.icon
+			position: absolute
+			top: 5px
+			right: 5px
+			font-size: 10px
+			transition: transform .25s
+	&__item:hover &__category
+	&__info
+		margin-bottom: 8px
+		color: $gray-dark 
+	&__price
+		display: inline-block
+		padding: 3px 10px
+		background: $purple 
+		border-radius: 8px 
+		color: $wh 
+	&__nav
+		display: flex
+		padding: 3px
+		border-radius: 12px
+		border: 1px solid $border
+		+m
+			display: none
+	&__link
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center 
+		flex: 0 0 25%
+		width: 25%
+		padding: 8px 
+		border-radius: 12px 
+		font-size: 12px
+		font-weight: 500
+		line-height: 1.2
+		color: $gray-dark
+		transition: all .25s
+		&:hover
+			color: $purple
+			.icon
+				fill: $purple
+		&.active
+			background: $purple
+			color: $wh
+			.icon
+				fill: $wh
+	&__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		margin-bottom: 5px
+		font-size: 0
+		.icon
+			font-size: 18px
+			fill: $text
+			transition: fill .25s
+	&__chart
+		max-width: 190px
+		height: 140px
+		margin: 0 auto 20px
+	&__desc
+		text-align: center
+	&__title
+		margin-bottom: 10px
+	&__date
+		margin-bottom: 50px
+		color: $gray-dark   
+	&__btn
+		min-width: 180px
+
++dark
+	.tabs
+		&__item
+			color: $wh
+			&:hover
+				color: $purple
+				.icon
+					fill: $purple
+			&.active
+				color: $text
+				.tabs__category .icon
+					fill: $text
+		&__category .icon
+			fill: $wh
+		&__nav
+			border-color: $border-dark
+		&__icon .icon
+			fill: $wh
+		&__link:hover
+			color: $wh 

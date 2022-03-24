@@ -1,0 +1,194 @@
+---
+title: Statement
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', '', 'active', '', '', '', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head.page__row_border
+					.page__col
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.page__welcome_sm.h2 Earnings Report
+					.page__col
+						+header
+				.page__row.page__row_border
+					.page__col
+						.details.details_statements
+							.details__container
+								.details__title.h6.mobile-hide Earnings Report
+								+dropdown('Last 30 days')
+								.details__row
+									.details__col
+										.details__top
+											.details__number.h1 $586
+											a.details__line(href="#")
+												.details__preview
+													img.details__pic(src="img/details-pic-1.png" alt="")
+												.details__info.caption-sm Your total earnings
+										.details__bottom
+											.details__statistics
+												.details__chart.details__chart_activity
+													div#chart-active-users
+												.details__status
+													.details__icon.bg-green
+														+i('arrow-up-fat')
+													.details__percent.caption-sm.color-green 6%
+											.details__info.caption-sm Update your payout method in Settings
+									.details__col
+										.details__chart.details__chart_report
+											div#chart-report
+								.details__list.details__list_three
+									.details__item
+										.details__head
+											.details__preview.bg-purple
+												img.details__pic(src="img/folder.svg" alt="")
+											.details__text.caption-sm Total Earnings
+										.details__counter.h4 $586.75
+										.details__indicator
+											.details__progress.bg-purple(style="width: 55%;")
+									.details__item
+										.details__head
+											.details__preview.bg-pink
+												img.details__pic(src="img/activity.svg" alt="")
+											.details__text.caption-sm Item Earnings
+										.details__counter.h4 $425.94
+										.details__indicator
+											.details__progress.bg-pink(style="width: 52%;")
+									.details__item
+										.details__head
+											.details__preview.bg-blue
+												img.details__pic(src="img/bag.svg" alt="")
+											.details__text.caption-sm Tax withheld
+										.details__counter.h4 $25.94
+										.details__indicator
+											.details__progress.bg-blue(style="width: 55%;")
+						.page__nav.mobile-hide
+							a.page__link.active(href="#") Last 30 Days
+							a.page__link(href="#") Aug 2020
+							a.page__link(href="#") Jul 2020
+						.page__stat.page__stat_sm
+							.sorting.mobile-show
+								.sorting__row
+									.sorting__col
+										.sorting__dropdowns
+											+dropdown('Last 30 days')
+											+dropdown('Aug 2020')
+									.sorting__col
+										.sorting__line
+											.sorting__search
+												button.sorting__open
+													+i('search')
+												input.sorting__input(type="text" placeholder="Search")
+											.sorting__actions
+												button.sorting__action
+													+i('print')
+												button.sorting__action
+													+i('download-fat')
+							.sorting.mobile-hide
+								.sorting__actions
+									button.sorting__action
+										+i('print')
+									button.sorting__action
+										+i('download-fat')
+							.products.products_statement
+								.products__title.h6.mobile-hide Statement
+								.products__info.caption.mobile-hide Please note: Transactions are based Time in California, USA.
+								.products__table
+									.products__row.products__row_head
+										.products__cell
+											label.checkbox
+												input.checkbox__input(type="checkbox")
+												span.checkbox__in
+													span.checkbox__tick
+										.products__cell Date
+										.products__cell Order ID
+										.products__cell Amount
+										.products__cell Price
+										.products__cell.text-right Type
+									mixin row(checked, title, bg, color)
+										.products__row
+											.products__cell
+												label.checkbox
+													if checked
+														input.checkbox__input(type="checkbox" checked)
+													else
+														input.checkbox__input(type="checkbox")
+													span.checkbox__in
+														span.checkbox__tick
+											.products__cell.color-gray 17 Aug 2020
+											.products__cell 39511350
+											.products__cell $68.00
+											.products__cell.color-red -68.00
+											.products__cell.text-right
+												.products__status.caption.bg-green Sale
+										.products__body
+											.products__bg.bg-green
+											.products__line
+												.products__col.color-gray 17 Aug 2020
+												.products__col $68.00
+												.products__col.color-red -68.00
+									+row
+									+row
+									+row
+									+row
+									+row
+									+row
+									+row
+								.products__more
+									button.products__btn.btn.btn_black Load More
+					.page__col
+						.page__group
+							.widget.widget_stat.widget_shadow.widget_after
+								.widget__chart.widget__chart_items
+									div#chart-earnings-by-item
+								.widget__title Earnings By Item
+								.widget__counter.title.title_md 479.4
+								.widget__text.widget__text_mb40 Update your payout method in Settings
+								.widget__legend
+									.widget__color
+										.widget__bg(style="background: #6C5DD3;")
+										.widget__text Templates
+									.widget__color
+										.widget__bg(style="background: #FFA2C0;")
+										.widget__text Themes
+							.widget.widget_shadow.widget_after
+								.widget__title.mr-auto Your Top Items
+								.quality.quality_big
+									.quality__list
+										a.quality__item(href="#")
+											.quality__preview.bg-pink-opacity
+												img.quality__pic(src="img/figure-1.png" alt="")
+											.quality__details
+												.quality__category.title Unity UI Kit
+													+i('arrow-right')
+												.quality__info.caption-sm UI Design
+												.quality__money.caption $64
+										a.quality__item(href="#")
+											.quality__preview.bg-pink-opacity
+												img.quality__pic(src="img/figure-2.png" alt="")
+											.quality__details
+												.quality__category.title Unity UI Kit
+													+i('arrow-right')
+												.quality__info.caption-sm UI Design
+												.quality__money.caption $64
+										a.quality__item(href="#")
+											.quality__preview.bg-blue-light
+												img.quality__pic(src="img/figure-6.png" alt="")
+											.quality__details
+												.quality__category.title Unity UI Kit
+													+i('arrow-right')
+												.quality__info.caption-sm UI Design
+												.quality__money.caption $64
+										a.quality__item(href="#")
+											.quality__preview.bg-yellow
+												img.quality__pic(src="img/figure-4.png" alt="")
+											.quality__details
+												.quality__category.title Unity UI Kit
+													+i('arrow-right')
+												.quality__info.caption-sm UI Design
+												.quality__money.caption $64
+									button.quality__btn.btn.btn_black.btn_wide Show all report
+
+

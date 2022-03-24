@@ -1,0 +1,152 @@
+.search
+	position: relative
+	z-index: 3
+	+m
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 10
+		visibility: hidden
+		opacity: 
+		&.show
+			visibility: visible
+			opacity: 1
+	&__field
+		position: relative
+		z-index: 2
+	&__input
+		width: 100% 
+		height: 48px
+		padding: 0 10px 0 44px
+		border-radius: 12px 
+		background: transparent
+		+fi
+		font-size: 14px
+		color: $text
+		transition: background .25s 
+		+m
+			height: 56px
+			background: $border
+			border-radius: 0   
+		+placeholder
+			color: $gray-dark
+	&__toggle
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 42px
+		font-size: 0
+		.icon
+			fill: $bl
+			transition: fill .25s 
+			&-search
+				font-size: 20px
+			&-close
+				display: none
+				font-size: 16px
+		&:hover .icon
+			fill: $purple
+	&__result
+		position: absolute
+		top: -4px
+		left: -4px
+		right: -4px
+		padding: 70px 16px 24px
+		border-radius: 12px
+		background: $wh
+		box-shadow: 0 10px 30px rgba(#E3E6EC, .5) 
+		visibility: hidden
+		opacity: 0
+		transition: all .25s 
+		+m
+			top: 0
+			left: 0
+			right: 0
+			box-shadow: 0 30px 30px rgba($bl, .3) 
+	&__info
+		color: $gray-dark 
+	&__item
+		display: flex
+		align-items: center
+		padding: 16px 0 
+		color: $text
+		transition: color .25s
+		&:hover
+			color: $purple 
+		+nl
+			border-bottom: 1px solid $border 
+	&__preview
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 40px
+		height: 40px
+		margin-right: 15px
+		border-radius: 12px
+		overflow: hidden 
+		font-size: 0
+	&__pic
+		max-width: 100%
+		max-height: 100% 
+	&__text
+		position: relative
+		padding-right: 30px
+		line-height: (20/14)
+		font-weight: 600  
+		.icon
+			position: absolute
+			top: 5px
+			right: 9px
+			font-size: 10px
+			fill: $text
+			transition: all .25s 
+	&__item:hover .icon
+		transform: translateX(4px)
+		fill: $purple
+	&__btn
+		height: 40px
+	&.active &__input
+		background: rgba($border, .3)
+		+m
+			background: $border  
+	&.active &__toggle
+		.icon
+			&-search
+				display: none
+			&-close
+				display: inline-block
+	&.active &__result
+		visibility: visible
+		opacity: 1
+
++dark
+	.search
+		&__toggle
+			.icon
+				fill: $wh
+			&:hover .icon
+				fill: $purple
+		&__input
+			color: $wh 
+			+m
+				background: $dark1
+		&__result
+			background: $dark
+			box-shadow: 0 10px 30px rgba(#000, .1) 
+			+m
+				box-shadow: 0 30px 30px rgba(#000, .5)
+		&__item
+			color: $wh
+		&__text .icon
+			fill: $wh
+		&__item:not(:last-child)
+			border-color: $border-dark 
+		&.active .search__input
+			background: rgba($border-dark, .03)
+			+m
+				background: $dark1

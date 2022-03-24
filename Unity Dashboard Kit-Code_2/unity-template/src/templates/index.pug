@@ -1,0 +1,88 @@
+---
+title: Overview
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head.page__row_border
+					.page__col
+						.page__hello.h5 Hi Tam Tran,
+						.page__welcome.h2 Welcome back<span class="desktop-hide">👋</span>
+					.page__col
+						+header
+				.page__row.page__row_border
+					.page__col
+						.slider
+							.slider__container
+								.slider__inner.owl-carousel.js-slider
+									.slider__item
+										.slider__details
+											.slider__title.h5 Set a Google Analytics Code
+											.slider__text Did you know you can set a Google Analytics code for your products?
+											a.slider__btn.btn.btn_white.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in") Settings
+										.slider__preview
+											img.slider__pic(src="img/slider-pic.png" alt="")
+									.slider__item
+										.slider__details
+											.slider__title.h5 Set a Google Analytics Code
+											.slider__text Did you know you can set a Google Analytics code for your products?
+											a.slider__btn.btn.btn_white.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in") Settings
+										.slider__preview
+											img.slider__pic(src="img/slider-pic.png" alt="")
+									.slider__item
+										.slider__details
+											.slider__title.h5 Set a Google Analytics Code
+											.slider__text Did you know you can set a Google Analytics code for your products?
+											a.slider__btn.btn.btn_white.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in") Settings
+										.slider__preview
+											img.slider__pic(src="img/slider-pic.png" alt="")
+								button.slider__close
+									+i('remove')
+						.page__widgets
+							.widget.widget_shadow
+								.widget__title Earnings by item
+								.widget__list
+									a.widget__item(href="products.html")
+										.widget__preview.bg-pink
+											img.widget__pic(src="img/figure-1.png" alt="")
+										.widget__details
+											.widget__category.title Bento 3D Kit
+												+i('arrow-right') 
+											.widget__info.caption Illustration
+									a.widget__item(href="products.html")
+										.widget__preview.bg-yellow
+											img.widget__pic(src="img/figure-2.png" alt="")
+										.widget__details
+											.widget__category.title Bento 3D Kit
+												+i('arrow-right')
+											.widget__info.caption Illustration
+									a.widget__item(href="products.html")
+										.widget__preview.bg-blue-light
+											img.widget__pic(src="img/figure-3.png" alt="")
+										.widget__details
+											.widget__category.title Collab UI Kit
+												+i('arrow-right')
+											.widget__info.caption Coded Template
+							.widget.widget_chart.widget_pink
+								.widget__title Earnings
+								.widget__wrap
+									.widget__chart.widget__chart_earning 
+										div#chart-earning
+									.widget__btns
+										button.widget__btn.btn.btn_purple.btn_wide Analytics
+					.page__col
+						.page__group
+							.widget.widget_stat.widget_pb60
+								.widget__title Your earning this month
+								.widget__counter.title.title_md.color-purple 479.4
+								.widget__text Update your payout method in Settings
+								a.widget__btn.btn.btn_white.btn_wide(href="payouts.html") Withdraw All Earnings
+							.widget.widget_empty.widget_p0
+								.widget__title Affiliate Impressions
+								.widget__chart.widget__chart_impressions
+									div#chart-affiliate-impressions
+
+

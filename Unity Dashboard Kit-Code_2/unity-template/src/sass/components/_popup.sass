@@ -1,0 +1,220 @@
+.popup
+	position: relative
+	max-width: 630px
+	margin: 15px auto
+	background: $wh
+	border-radius: 24px 
+	&__form
+		padding: 32px
+		border-radius: 24px
+	&__title
+		margin-bottom: 48px
+		+m
+			margin-bottom: 42px
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: -13px 0 32px -13px
+		+m
+			display: none
+	&__tag
+		margin: 13px 0 0 13px
+		border: 2px solid $red
+		border-radius: 12px 
+		padding: 6px 16px
+		line-height: (20/14)
+		font-weight: 600
+		color: $text   
+		transition: all .25s
+		&:hover,
+		&.active
+			background: $purple
+			border-color: $purple 
+			color: $wh
+	&__select
+		min-width: 100%
+		height: 56px
+		margin-bottom: 32px
+		padding: 0 40px 0 24px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		border: none
+		border-radius: 12px 
+		background: rgba(#E4E4E4, .25) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none'%3E%3Cpath fill-rule='evenodd' d='M9.293.333a.5.5 0 0 1 .39.812L5.39 6.512a.5.5 0 0 1-.781 0L.317 1.146a.5.5 0 0 1 .39-.812h8.586z' fill='%23b5b5be'/%3E%3C/svg%3E") no-repeat calc(100% - 16px) 50% / 11px 7px
+		font-size: 14px
+		font-weight: 600 
+		color: $gray-dark
+		transition: all .25s 
+		&::-ms-expand
+			display: none
+		&:-moz-focusring
+			color: transparent
+			text-shadow: 0 0 0 #000 
+	&__user
+		+nl
+			margin-bottom: 32px
+			padding-bottom: 32px
+			border-bottom: 1px solid $border 
+			+m
+				padding-bottom: 24px
+	&__category
+		margin-bottom: 32px
+		color: $gray-light
+	&__line
+		display: flex
+	&__ava
+		flex-shrink: 0
+		width: 64px
+		height: 64px
+		font-size: 0
+		+m
+			width: 80px
+			height: 80px
+	&__ava &__pic
+		width: 100% 
+		min-height: 100%
+		border-radius: 50%
+		image-orientation: from-image
+	&__details
+		flex: 0 0 calc(100% - 64px)
+		width: calc(100% - 64px)
+		padding-left: 40px
+		+m
+			flex: 0 0 calc(100% - 80px)
+			width: calc(100% - 80px)
+			padding-left: 24px
+	&__btns
+		display: flex
+		margin-bottom: 16px
+		+m
+			display: block
+			margin: 0 0 32px
+	&__btns &__btn
+		min-width: 166px
+		height: 40px
+		+m
+			min-width: 100%
+		&.btn_gray
+			+m
+				background: $wh  
+	&__btns &__btn,
+	&__loading
+		+nl
+			margin-right: 16px
+			+m
+				margin: 0
+	&__loading
+		position: relative
+		overflow: hidden
+		border-radius: 16px 
+	&__file
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 140px
+		opacity: 0
+	&__loading:hover &__btn
+		background: darken($purple, 5)
+	&__text
+		color: $gray-light
+		+m
+			margin-left: -104px 
+	&__fieldset
+		margin-bottom: 24px
+	&__fieldset > &__field
+		+nl
+			margin-bottom: 20px
+	&__row
+		display: flex
+		margin: 0 -8px
+		+m
+			display: block
+			margin: 0
+		+nl
+			margin-bottom: 20px
+	&__row &__field
+		flex: 0 0 calc(50% - 16px)
+		width: calc(50% - 16px)
+		margin: 0 8px 
+		+m
+			width: 100%
+			margin: 0
+		+nl
+			+m
+				margin-bottom: 24px
+	&__form > &__btn
+		+m
+			min-width: 100% 
+	.mfp-close
+		position: absolute
+		top: 20px
+		right: 32px
+		width: 48px
+		height: 48px
+		border-radius: 50% 
+		line-height: normal
+		opacity: 1
+		font-size: 0
+		background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%2311142d' d='M1.613.2l.094.083L5 3.585 8.293.293a1 1 0 0 1 1.414 0 1 1 0 0 1 .083 1.32l-.083.094L6.415 5l3.292 3.293a1 1 0 0 1-1.32 1.497l-.094-.083L5 6.415 1.707 9.707A1 1 0 0 1 .21 8.387l.083-.094L3.585 5 .293 1.707a1 1 0 0 1 0-1.414A1 1 0 0 1 1.613.21z'/%3E%3C/svg%3E") no-repeat 50% 50% / 10px auto
+		transition: box-shadow .25s 
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		+m
+			right: 20px
+			box-shadow: 0 5px 20px rgba(#E3E6EC, .85)
+		&:hover
+			box-shadow: 0 5px 20px rgba(#E3E6EC, .85)
+
+.mfp-container
+	padding: 20px
+	+m
+		padding: 0
+		
+@media (max-width: 900px)
+	.mfp-container
+		padding: 30px 20px 
+			
+.mfp-bg
+	background: rgba($bl, .7)
+
+.mfp-zoom-in 
+  .popup
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8) 
+  &.mfp-bg 
+    opacity: 0
+    transition: all 0.2s ease-out
+  &.mfp-ready
+    .popup
+      opacity: 1
+      transform: scale(1) 
+    &.mfp-bg 
+      opacity: 0.8
+  &.mfp-removing 
+    .popup 
+      transform: scale(0.8) 
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+
++dark
+	.popup
+		background: $dark
+		&__tag
+			color: $wh
+		&__user
+			border-color: $border-dark
+		.mfp-close
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23ffffff' d='M1.613.2l.094.083L5 3.585 8.293.293a1 1 0 0 1 1.414 0 1 1 0 0 1 .083 1.32l-.083.094L6.415 5l3.292 3.293a1 1 0 0 1-1.32 1.497l-.094-.083L5 6.415 1.707 9.707A1 1 0 0 1 .21 8.387l.083-.094L3.585 5 .293 1.707a1 1 0 0 1 0-1.414A1 1 0 0 1 1.613.21z'/%3E%3C/svg%3E")
+			+m
+				box-shadow: 0 5px 20px rgba(#000, .35)
+			&:hover
+				box-shadow: 0 5px 20px rgba(#000, .35)
+		&__select
+			background-color: rgba($border-dark, .04) 
+		&__btns .popup__btn.btn_gray
+			background: none 
+	
+	.mfp-bg
+		background: rgba($bl, .9)

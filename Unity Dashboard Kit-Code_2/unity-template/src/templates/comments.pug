@@ -1,0 +1,180 @@
+---
+title: Comments
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', '', '', '', '', 'active', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head
+					.page__col
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.h2 Comments
+					.page__col
+						+header
+				.page__content
+					.banner
+						.banner__container
+							.banner__preview
+								img.banner__pic(src="img/banner-pic.png" alt="")
+							.banner__wrap
+								.banner__title.h3 3 comments found.
+								.banner__text Create Your Product Dashboard in Minutes
+								button.banner__btn.btn.btn_white Mark all as read
+						.activity
+							.activity__row
+								.activity__col
+									.activity__container
+										.activity__title.h6 Recent Activity
+										.activity__inner
+											.activity__variants
+												label.checkbox
+													input.checkbox__input(type="checkbox")
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Likes
+												label.checkbox
+													input.checkbox__input(type="checkbox" checked)
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Comments
+												label.checkbox
+													input.checkbox__input(type="checkbox")
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Mention
+												label.checkbox
+													input.checkbox__input(type="checkbox" checked)
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Followers
+												label.checkbox
+													input.checkbox__input(type="checkbox")
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Mention
+												label.checkbox
+													input.checkbox__input(type="checkbox")
+													span.checkbox__in
+														span.checkbox__tick
+														span.checkbox__text Other
+											.activity__group
+												.activity__list
+													.activity__item.active
+														.activity__ava
+															img.activity__pic(src="img/ava-4.png" alt="")
+															.activity__status
+																img.activity__pic(src="img/chat-black.svg" alt="")
+														.activity__details
+															.activity__author.title Donald Franklin
+															.activity__line.caption
+																.activity__category Commented on
+																.activity__info Collab.
+																.activity__time 12h
+															.activity__text "Love this so much! What tools do you use to create your 3d illustrations?"
+														.activity__preview
+															img.activity__pic(src="img/figure-5.png" alt="")
+													.activity__item
+														.activity__ava
+															img.activity__pic(src="img/ava-5.png" alt="")
+															.activity__status
+																img.activity__pic(src="img/chat-black.svg" alt="")
+														.activity__details
+															.activity__author.title Dash
+															.activity__line.caption
+																.activity__category Commented on
+																.activity__info Sapiens.
+																.activity__time 16h
+															.activity__text "Love this so much! What tools do you use to create your 3d illustrations?"
+														.activity__preview
+															img.activity__pic(src="img/figure-5.png" alt="")
+													.activity__item
+														.activity__ava
+															img.activity__pic(src="img/ava-4.png" alt="")
+															.activity__status
+																img.activity__pic(src="img/chat-black.svg" alt="")
+														.activity__details
+															.activity__author.title Donald Franklin
+															.activity__line.caption
+																.activity__category Commented on
+																.activity__info Collab.
+																.activity__time 18h
+															.activity__text "Love this so much! What tools do you use to create your 3d illustrations?"
+														.activity__preview
+															img.activity__pic(src="img/figure-5.png" alt="")
+													.activity__item
+														.activity__ava
+															img.activity__pic(src="img/ava-5.png" alt="")
+															.activity__status
+																img.activity__pic(src="img/chat-black.svg" alt="")
+														.activity__details
+															.activity__author.title Donald Franklin
+															.activity__line.caption
+																.activity__category Commented on
+																.activity__info Collab.
+																.activity__time 22h
+															.activity__text "Love this so much! What tools do you use to create your 3d illustrations?"
+														.activity__preview
+															img.activity__pic(src="img/figure-5.png" alt="")
+													.activity__item
+														.activity__ava
+															img.activity__pic(src="img/ava-4.png" alt="")
+															.activity__status
+																img.activity__pic(src="img/chat-black.svg" alt="")
+														.activity__details
+															.activity__author.title Donald Franklin
+															.activity__line.caption
+																.activity__category Commented on
+																.activity__info Bento 1.
+																.activity__time 24h
+															.activity__text "Love this so much! What tools do you use to create your 3d illustrations?"
+														.activity__preview
+															img.activity__pic(src="img/figure-5.png" alt="")
+												.activity__btns
+													button.activity__btn.btn.btn_black Load More
+								.activity__col
+									.activity__title.h6 Add a new comment
+									.editor
+										.editor__wrap
+											.editor__head
+												.editor__control
+													button.editor__action
+														+i('editor-smile')
+													button.editor__action.active
+														+i('editor-bold')
+													button.editor__action
+														+i('editor-italic')
+													button.editor__action
+														+i('editor-pic')
+												button.editor__add
+											.editor__body
+												.editor__field
+													textarea.editor__textarea(placeholder="text ...")
+												.editor__gallery
+													.editor__preview
+														img.editor__pic(src="img/editor-pic-1.png" alt="")
+														button.editor__close
+															+i('remove')
+													.editor__preview
+														img.editor__pic(src="img/editor-pic-2.png" alt="")
+														button.editor__close
+															+i('remove')
+										.files
+											a.files__item.purple(href="#")
+												.files__preview
+													img.files__pic(src="img/figure-1.png" alt="")
+												.files__details
+													.files__title.caption Attachment.PNG 
+													.files__size.caption 3.6 MB
+											a.files__item.blue(href="#")
+												.files__preview
+													img.files__pic(src="img/figure-5.png" alt="")
+												.files__details
+													.files__title.caption Attachment.PNG 
+													.files__size.caption 3.6 MB
+										button.editor__btn.btn.btn_black.btn_wide Reply Comment
+
+
+
+

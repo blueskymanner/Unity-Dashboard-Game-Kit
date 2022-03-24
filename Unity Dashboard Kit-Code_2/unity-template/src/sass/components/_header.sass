@@ -1,0 +1,90 @@
+.header
+	position: relative
+	z-index: 10
+	display: flex
+	align-items: center
+	max-width: 298px
+	margin-left: auto
+	+x
+		max-width: 100%
+	+m
+		height: 96px
+		max-width: calc(100% + 32px) 
+		margin: 0 -16px 
+		padding: 0 32px 
+		border-bottom: 1px solid $border
+	.search
+		width: 214px
+		margin-left: -8px
+		margin-right: auto
+		+x
+			width: auto
+			flex-grow: 1
+			margin-right: 50px
+		+m
+			flex-grow: 0
+			margin-left: 0
+			margin-right: 0
+	.notifications
+		+m
+			margin-right: 25px 
+	&__user
+		display: none
+		flex-shrink: 0 
+		width: 40px
+		height: 40px
+		font-size: 0
+		+m
+			display: block
+	&__pic
+		width: 100%
+		min-height: 100%
+		border-radius: 50%
+	&__burger
+		display: none
+		width: 32px
+		height: 40px
+		margin-right: auto
+		font-size: 0 
+		+m
+			display: inline-block
+		&:before,
+		&:after
+			content: ""
+			display: inline-block 
+			width: 32px
+			height: 2px
+			margin: 3px auto 
+			border-radius: 1px
+			background: $bl 
+	&__search
+		display: none
+		width: 40px
+		height: 40px
+		margin-right: 25px
+		border-radius: 50% 
+		box-shadow: 0 5px 10px rgba(#E3E6EC, .6)
+		font-size: 0
+		transition: all .25s
+		+m
+			display: inline-block
+		.icon
+			font-size: 20px
+			fill: $bl
+		&.active
+			background: $purple
+			.icon
+				fill: $wh
+
++dark
+	.header
+		&__burger
+			&:before,
+			&:after
+				background: $wh
+		&__search
+			box-shadow: 0 5px 10px rgba(#000, .3)
+			.icon
+				fill: $wh
+		+m
+			border-color: $border-dark

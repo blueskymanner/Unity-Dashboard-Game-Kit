@@ -1,0 +1,118 @@
+---
+title: Inbox
+---
+extends layouts/_layout
+block content
+	.page.page_other
+		+sidebar('', '', '', '', '', '', 'active')
+		.page__wrapper
+			.page__center
+				.page__row.page__row_responsive.page__row_head.page__row_border
+					.page__col.page__col_w50
+						.page__hello.h5 Hi Dash UI8,
+						.page__welcome.h2 Your Inbox
+					.page__col.page__col_w50
+						+header
+				.page__row.page__row_responsive.page__row_border
+					.page__col.page__col_w50
+						.inbox
+							.sorting
+								.sorting__search
+									button.sorting__open
+										+i('search')
+									input.sorting__input(type="text" placeholder="Search")
+							.inbox__tags
+								a.inbox__tag.active(href="#") Your inbox
+								a.inbox__tag(href="#") Archives
+								a.inbox__tag(href="#") Done
+								a.inbox__tag(href="#") Saved
+							.inbox__container
+								.inbox__title.title Recent Messages
+								.inbox__list
+									mixin item(classInbox)
+										.inbox__item(class=classInbox)
+											.inbox__ava
+												img.inbox__pic(src="img/ava-2.png" alt="")
+											.inbox__details
+												.inbox__head
+													.inbox__author.caption Joel Becker
+													.inbox__time.caption 12h
+												.inbox__title.title When is the Sketch version available for download?
+												.inbox__text "Love this so much! What tools do you use to create your 3d illustrations?"
+												.actions
+													button.actions__btn
+														+i('comment')
+													button.actions__btn
+														+i('star')
+													button.actions__btn
+														+i('more')
+									+item('active')
+									+item
+									+item
+									+item
+									+item
+									+item
+								.inbox__foot
+									button.inbox__btn.btn.btn_black Load More
+					.page__col.page__col_w50
+						.inbox
+							.inbox__control
+								.inbox__btns
+									button.inbox__btn.btn.btn_purple Delete
+									button.inbox__btn.btn.btn_gray Archive
+								a.inbox__more(href="#")
+									+i('dots-border')
+							.inbox__box
+								.inbox__ava
+									img.inbox__pic(src="img/ava-2.png" alt="")
+								.inbox__details
+									.inbox__head
+										.inbox__author.title Joel Becker
+										.inbox__time.caption 12h
+									.inbox__title.h5 When is the Sketch version available for download?
+									.inbox__text
+										p Thanks! it's amazing. however, I cannot open this and 'cleverly' which was also just released by the same author, on sketch 63.1.  
+										p I get a message that says that the file cannot be opened. do you have any idea why this might be? can you upload a compatible file with this sketch version please? I'll appreciate the support. thanks in advance
+									.files
+										.files__list
+											a.files__item.purple(href="#")
+												.files__preview
+													img.files__pic(src="img/figure-1.png" alt="")
+												.files__details
+													.files__title.caption Attachment.PNG 
+													.files__size.caption 3.6 MB
+											a.files__item.blue(href="#")
+												.files__preview
+													img.files__pic(src="img/figure-5.png" alt="")
+												.files__details
+													.files__title.caption Attachment.PNG 
+													.files__size.caption 3.6 MB
+							.editor
+								.editor__wrap
+									.editor__head
+										.editor__control
+											button.editor__action
+												+i('editor-smile')
+											button.editor__action.active
+												+i('editor-bold')
+											button.editor__action
+												+i('editor-italic')
+											button.editor__action
+												+i('editor-pic')
+										button.editor__add
+									.editor__body
+										.editor__field
+											textarea.editor__textarea(placeholder="text ...")
+										.editor__gallery
+											.editor__preview
+												img.editor__pic(src="img/editor-pic-1.png" alt="")
+												button.editor__close
+													+i('remove')
+											.editor__preview
+												img.editor__pic(src="img/editor-pic-2.png" alt="")
+												button.editor__close
+													+i('remove')
+								button.editor__btn.btn.btn_black Send Message
+
+
+

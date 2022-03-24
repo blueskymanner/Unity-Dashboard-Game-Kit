@@ -1,0 +1,237 @@
+.notification
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: -18px 0 28px -18px
+		+m
+			margin: -10px 0 24px -10px
+	&__tag
+		margin: 18px 0 0 18px
+		border: 2px solid $border
+		border-radius: 12px 
+		padding: 6px 16px
+		line-height: (20/14)
+		font-weight: 600
+		color: $text   
+		transition: all .25s
+		+m
+			margin: 10px 0 0 10px 
+		&:hover,
+		&.active
+			background: $purple
+			border-color: $purple 
+			color: $wh  
+	&__container
+		position: relative
+		padding: 32px
+		border-radius: 24px
+		background: $wh 
+		+m
+			padding: 32px 24px 
+		&:before
+			content: ""
+			position: absolute
+			top: 32px
+			left: 32px
+			right: 32px
+			bottom: -32px
+			z-index: -1
+			+shadow
+	&__title
+		margin-bottom: 32px
+		+m
+			margin-bottom: 16px
+	&__list
+		margin: 0 -16px
+		+m
+			margin: 0  
+	&__item
+		display: flex
+		padding: 32px 16px
+		border-radius: 12px
+		background: transparent
+		color: $gray-dark 
+		cursor: pointer
+		transition: all .25s
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		+m
+			padding: 24px 0
+			border-radius: 0 
+			border-bottom: 1px solid $border     
+	&__ava
+		position: relative
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		font-size: 0
+	&__ava > &__pic
+		width: 100% 
+		min-height: 100%
+		border-radius: 50% 
+	&__status
+		position: absolute
+		top: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		border: 2px solid $wh
+		font-size: 0
+	&__details
+		flex-grow: 1
+		padding: 0 24px
+		+x
+			padding-right: 0
+		+d
+			padding: 0 24px
+		+m
+			padding: 0 0 0 16px 
+	&__author
+		margin-bottom: 9px
+		color: $text 
+		transition: color .25s
+	&__line
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 16px
+	&__line &__category
+		margin-right: 8px
+	&__info
+		margin-right: 8px
+		color: $link 
+	.actions
+		+m
+			margin-left: -64px
+	&__item &__text
+		margin-bottom: 16px
+		p
+			+nl
+				margin-bottom: 20px
+	&__item:hover
+		background: rgba($border, .3) 
+		+m
+			background: none 
+	&__item.active
+		background: $purple
+		color: $wh 
+		+m
+			background: none
+			color: $gray-dark  
+		.actions__btn
+			border-color: $wh
+			+m
+				border-color: $border 
+			.icon
+				fill: $wh
+				+m
+					fill: $bl 
+		.notification__title,
+		.notification__author,
+		.notification__info
+			color: $wh 
+		.notification__title
+			+m
+				color: $text 
+		.notification__author
+			+m
+				color: $link 
+		.notification__info
+			+m
+				color: $gray-dark 
+	&__preview
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 96px
+		height: 96px
+		border-radius: 8px
+		font-size: 0
+		+x
+			display: none
+		+d
+			display: block
+		+m
+			display: none
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 7px
+			right: 7px
+			height: 7px
+			border-radius: 0 0 7px 7px
+		&.bg-purple-light:before
+			background: rgba($purple-light, .5) 
+		&.bg-blue-light:before
+			background: rgba($blue-light, .5) 
+		&.bg-yellow:before
+			background: rgba($yellow, .5) 
+	&__preview &__pic
+		max-height: 100% 
+	&__btns
+		padding-top: 24px
+		text-align: center
+	&__btn
+		min-width: 180px
+	&__photo
+		margin-bottom: 40px
+		font-size: 0
+	&__photo &__pic
+		width: 100% 
+	&__body
+		padding: 0 24px
+		+nl
+			margin-bottom: 32px
+	&__stage
+		margin-bottom: 16px
+	&__parameters
+		display: flex
+		margin-bottom: 24px
+	&__parameter
+		display: flex
+		align-items: center
+		color: $link
+		+nl
+			margin-right: 16px
+	&__icon
+		margin-right: 10px
+		font-size: 0
+
++dark
+	.notification
+		&__container
+			background: $dark
+			&:before
+				+shadow-dark
+		&__tag
+			border-color: $border-dark
+			color: $wh
+			&:hover
+				border-color: $purple 
+		&__item
+			+m
+				border-color: $border-dark 
+		&__item:hover
+			background: rgba($border-dark, .04)
+			+m
+				background: none 
+		&__item.active
+			background: $purple
+			+m
+				background: none 
+		&__item.active .actions__btn
+			+m 
+				border-color: $border-dark
+				.icon
+					fill: $wh
+		&__item.active .notification__author
+			color: $wh 
+		&__item.active .notification__info
+			color: $link 
+		&__author
+			color: $wh 

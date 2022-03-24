@@ -1,0 +1,66 @@
+.filters
+	&__container
+		position: relative
+		padding: 32px
+		background: $wh
+		border-radius: 24px  
+		&:before
+			content: ""
+			position: absolute 
+			top: 32px
+			left: 17px
+			right: 17px
+			bottom: -32px
+			z-index: -1
+			+shadow
+	&__item
+		+nl
+			margin-bottom: 32px
+			padding-bottom: 32px
+			border-bottom: 1px solid $border 
+	&__title
+		margin-bottom: 24px
+	&__variants
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-bottom: 32px
+	.checkbox
+		+nl
+			margin-bottom: 20px
+	&__control
+		display: flex
+		align-items: center
+	&__btns
+		display: flex
+		margin: 0 -5px
+	&__btn
+		flex: 0 0 calc(50% - 10px)
+		min-width: calc(50% - 10px) 
+		height: 44px
+		margin: 0 5px
+		padding: 0  
+		font-size: 14px
+	&__line
+		display: flex
+		margin-bottom: 32px
+	.radio
+		+nl
+			margin-right: 32px
+	&__reset
+		line-height: (20/14)
+		font-weight: 600 
+		color: $gray-dark
+		transition: color .25s
+		&:hover
+			color: $purple 
+
++dark
+	.filters
+		&__container
+			background: $dark 
+			&:before
+				+shadow-dark
+		&__item
+			border-color: $border-dark 
+		

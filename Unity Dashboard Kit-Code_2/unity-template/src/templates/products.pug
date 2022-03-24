@@ -1,0 +1,112 @@
+---
+title: Products
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active', '', '', '', '', '', '', '', true)
+		.page__wrapper
+			.page__center
+				.page__row.page__row_head
+					.page__col
+						.page__hello.h5 Hi Tam Tran,
+						.page__welcome.h2 Welcome back<span class="desktop-hide">👋</span>
+					.page__col
+						+header
+				.page__content
+					.banner
+						.banner__container
+							.banner__preview
+								img.banner__pic(src="img/banner-pic.png" alt="")
+							.banner__wrap
+								.banner__title.h3 Your Products
+								.banner__text Create Your Product Dashboard in Minutes
+								button.banner__btn.btn.btn_white Check all settings
+					.page__stat.page__stat_pt32
+						.sorting
+							.sorting__row
+								.sorting__col
+									.sorting__dropdowns
+										+dropdown('Last 30 days')
+										+dropdown('Aug 2020')
+								.sorting__col
+									.sorting__line
+										.sorting__search
+											button.sorting__open
+												+i('search')
+											input.sorting__input(type="text" placeholder="Search")
+										.sorting__actions
+											button.sorting__action
+												+i('edit')
+											button.sorting__action
+												+i('box')
+						.products.products_main
+							.products__table
+								.products__row.products__row_head
+									.products__cell
+										label.checkbox
+											input.checkbox__input(type="checkbox")
+											span.checkbox__in
+												span.checkbox__tick
+									.products__cell Product
+									.products__cell Amount
+									.products__cell Color
+									.products__cell Price
+									.products__cell Rating
+								mixin row(checked, title, bg, color)
+									.products__row
+										.products__cell
+											label.checkbox
+												if checked
+													input.checkbox__input(type="checkbox" checked)
+												else
+													input.checkbox__input(type="checkbox")
+												span.checkbox__in
+													span.checkbox__tick
+										.products__cell
+											a.products__item(href="#")
+												.products__preview
+													img.products__pic(src="img/product-pic.png" alt="")
+												.products__details
+													.products__title.title=title
+													.products__info.caption.color-gray 3D Illustration
+										.products__cell
+											.products__payment 37 in stock
+										.products__cell
+											.products__color
+												.products__bg(style="background-color: " + bg + ";")
+												.products__text=color
+										.products__cell
+											.products__cost
+												.products__money $68.00
+												.products__tooltip
+													.products__sale
+														.products__icon.bg-red
+															img.products__pic(src="img/chat-black.svg" alt="")
+														.products__caption.caption-sm Latest Sale
+													.products__price.h3 $68
+													.products__progress
+														span(style="width: 68%;")
+										.products__cell
+											.products__rating <span class="color-green">5.0</span> (45 votes)
+									.products__body
+										.products__bg(style="background-color: " + bg + ";")
+										.products__line
+											.products__col
+												.products__money $68.45
+											.products__col 37 in stock
+											.products__col.color-green 5.0
+								+row('', 'Abstract 3D Kit', '#6C5DD3', 'Purple')
+								+row('', 'Sapiens Illustration', '#7FBA7A', 'Green')
+								+row('', 'Collab Landing Page', '#FFCE73', 'Yellow')
+								+row('', 'Abstract 3D Kit', '#FFA2C0', 'Pink')
+								+row('', 'Abstract 3D Kit', '#6C5DD3', 'Purple')
+								+row('', 'Sapiens Illustration', '#7FBA7A', 'Green')
+								+row('', 'Collab Landing Page', '#FFCE73', 'Yellow')
+							.products__more
+								button.products__btn.btn.btn_black Load More
+
+
+
+
+

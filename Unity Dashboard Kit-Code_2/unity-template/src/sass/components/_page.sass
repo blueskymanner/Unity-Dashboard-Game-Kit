@@ -1,0 +1,329 @@
+.page
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	+t
+		overflow: hidden
+	&__wrapper
+		flex-grow: 1
+		padding-left: 256px
+		transition: all .25s 
+		+t
+			padding-left: 96px
+		+m
+			padding-left: 0
+	&__center
+		max-width: 1200px
+		margin: 0 auto  
+		+x
+			width: 100% 
+			max-width: 930px
+			padding: 0 70px 40px
+		+t
+			padding: 0 32px 40px
+		+m
+			padding: 0 16px 32px  
+	&__row
+		display: flex
+		+x
+			display: block
+		&_head
+			+x
+				display: flex
+				margin: 0 -16px 
+				padding: 40px 0
+			+t
+				flex-direction: column-reverse
+				margin: 0
+				padding: 25px 0
+			+m
+				padding: 0   
+			.page__col
+				padding-top: 48px
+				+x
+					flex: 0 0 calc(50% - 32px)
+					max-width: calc(50% - 32px)
+					margin: 0 16px 
+					padding: 0
+				+t
+					max-width: 100%
+					margin: 0
+					&:nth-child(2)
+						margin-bottom: 30px
+				+m
+					&:first-child
+						padding: 16px 16px 28px 
+					&:nth-child(2)
+						margin: 0
+		&_border
+			.page__col
+				&:nth-child(2)
+					border-left: 1px solid $border
+					+x
+						border: none
+		&_responsive
+			+x
+				display: flex
+				margin: 0 -40px 
+			+d
+				display: block
+				margin: 0
+			&.page__row_head
+				+x
+					padding: 0
+				+d
+					display: flex
+					margin: 0 -16px 
+					padding: 40px 0
+				+t
+					margin: 0
+					padding: 25px 0 
+				+m
+					padding: 0 
+			&.page__row_head .page__col
+				+x
+					padding-top: 40px
+					padding-bottom: 40px
+				+d
+					flex: 0 0 calc(50% - 32px)
+					max-width: calc(50% - 32px)
+					margin: 0 16px 
+					padding: 0
+				+t
+					flex: 0 0 100%
+					max-width: 100% 
+					width: 100% 
+					margin: auto
+				&:nth-child(2)
+					+t
+						margin-bottom: 30px
+					+m
+						margin-bottom: 0
+			.page__col
+				+x
+					margin: 0
+					padding-left: 40px
+					padding-right: 40px
+				+d
+					padding-left: 0
+					padding-right: 0
+				&:first-child
+					+x
+						flex: 0 0 55%
+						max-width: 55%
+					+d
+						max-width: 100% 
+				&:nth-child(2)
+					+x
+						flex: 0 0 45%
+						max-width: 45%
+						border-left: 1px solid $border
+					+d
+						max-width: 100% 
+						border: none 
+	&__col
+		padding: 0 64px 44px
+		+w
+			padding: 0 48px 44px 
+		+x
+			padding: 0
+		&:first-child
+			flex: 0 0 calc(100% - 426px)
+			max-width: calc(100% - 426px)
+			+w
+				flex: 0 0 calc(100% - 390px)
+				max-width: calc(100% - 390px)
+			+x
+				max-width: 100% 
+		&:nth-child(2)
+			flex-shrink: 0
+			width: 426px
+			+w
+				width: 390px
+			+x
+				width: 100% 
+	&__row:not(.page__row_head):not(.page__row_responsive) &__col:nth-child(2)
+		+x
+			margin-top: 32px
+	&__row:not(.page__row_head) &__col:nth-child(2)
+		+d
+			margin-top: 32px
+		// +m
+			// padding: 0 16px 
+	.page__col.page__col_w50
+		flex: 0 0 50%
+		max-width: 50%
+		+x
+			flex: 0 0 50%
+			max-width: 50%
+			margin: 0
+			padding-left: 40px
+			padding-right: 40px
+		+d
+			padding: 0
+		&:first-child
+			+d
+				max-width: 100% 
+				margin-bottom: 30px
+		&:nth-child(2)
+			+d
+				max-width: 100%
+		+nl
+			+d
+				margin-bottom: 0
+	&__row:not(.page__row_head) .page__col.page__col_w50
+		+nl
+			+d
+				margin-bottom: 32px
+	&__widgets
+		display: flex
+		margin: 0 -16px
+		+m
+			display: block
+			margin: 0
+		+nl
+			margin-bottom: 43px
+			+m
+				margin-bottom: 32px
+	&__widgets .widget
+		flex: 0 0 calc(50% - 32px)
+		width: calc(50% - 32px)
+		margin: 0 16px
+		+m
+			width: 100%
+			margin: 0
+			+nl
+				margin-bottom: 32px
+	&__group
+		+x
+			display: flex
+			align-items: flex-start
+			margin: 0 -16px 
+		+m
+			display: block
+			margin: 0
+		.widget
+			+x
+				flex: 0 0 calc(50% - 32px)
+				max-width: calc(50% - 32px)
+				margin: 0 16px
+			+m
+				max-width: 100%
+				margin: 0 
+			+nl
+				margin-bottom: 69px
+				+x
+					margin-bottom: 0
+				+m
+					margin-bottom: 32px
+	&__content
+		padding: 0 64px 64px
+		+w
+			padding: 0 48px 48px 
+		+x
+			padding: 0 0 40px 
+		+t
+			padding: 0
+		&_pt64
+			padding-top: 64px
+			border-top: 1px solid $border 
+			+x
+				margin-top: 32px
+				padding: 0
+				border: none 
+	&__stat
+		position: relative
+		padding: 50px 32px 40px
+		border-radius: 24px
+		background: $wh 
+		+m
+			padding: 32px 0 
+		&:before
+			content: ""
+			position: absolute
+			top: 43px
+			left: 32px
+			right: 32px
+			bottom: -43px
+			z-index: -1
+			+shadow
+		&_pt32
+			padding-top: 32px 
+		&_sm
+			.sorting
+				position: absolute
+				top: 32px
+				right: 40px
+				+m
+					position: relative
+					top: auto
+					right: auto
+	&__flex
+		display: flex
+		+d
+			display: block
+		.widget
+			&:first-child
+				flex-shrink: 0 
+				width: 298px
+				margin-right: 32px
+				+d
+					width: 100%
+					margin: 0 0 32px  
+			&:nth-child(2)
+				flex-grow: 1
+	&__welcome_sm
+		+d
+			font-size: 32px 
+	&__hello
+		+x
+			font-size: 18px
+			line-height: (24/18)
+		+m
+			font-size: 16px
+	&__title
+		margin-bottom: 32px
+		+m
+			padding: 0 24px 
+	&__nav
+		display: flex
+		margin-bottom: 48px
+		+d
+			margin-bottom: 32px
+	&__nav &__link
+		padding: 7px 18px
+		border-radius: 12px
+		font-weight: 600 
+		color: $gray-dark
+		transition: all .25s
+		&:hover,
+		&.active
+			background: $purple
+			color: $wh 
+	&.toggle &__wrapper
+		+d
+			padding-left: 96px 
+		+t
+			transform: translateX(160px)
+		+m
+			padding-left: 0
+			transform: translateX(256px)
+	&_other
+		+d
+			overflow: hidden
+	&_other &__center
+		+x
+			padding-bottom: 0
+		+d
+			padding-bottom: 40px
+
++dark
+	.page
+		&__row_border .page__col:nth-child(2)
+			border-color: $border-dark
+		&__stat
+			background: $dark
+			&:before
+				+shadow-dark
+		&__content_pt64 
+			border-color: $border-dark 

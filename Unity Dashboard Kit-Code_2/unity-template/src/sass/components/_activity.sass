@@ -1,0 +1,212 @@
+.activity
+	&__row
+		display: flex
+		+d
+			display: block
+	&__col
+		&:first-child
+			flex-grow: 1
+			+d
+				margin-bottom: 32px
+		&:nth-child(2)
+			flex-shrink: 0
+			width: 426px 
+			padding: 32px 0 0 65px
+			+x
+				width: 370px
+				padding-left: 32px
+			+d
+				width: 100%
+				padding: 0 
+			+m
+				padding: 0 16px 
+	&__container
+		position: relative
+		padding: 32px 
+		background: $wh
+		border-radius: 24px
+		+m
+			padding: 32px 24px  
+		&:before
+			content: ""
+			position: absolute
+			top: 26px
+			left: 19px
+			right: 19px
+			bottom: -26px
+			z-index: -1
+			+shadow
+	&__title
+		margin-bottom: 32px
+		+m
+			margin-bottom: 16px
+	&__inner
+		display: flex
+		+x
+			display: block
+	&__variants
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		flex-shrink: 0
+		width: 130px
+		padding-right: 15px
+		+x
+			display: none
+		.checkbox
+			+nl
+				margin-bottom: 16px
+	&__list
+		margin-right: -16px
+		+m
+			margin: 0
+	&__item
+		position: relative
+		display: flex
+		padding: 32px 16px
+		overflow: hidden
+		border-radius: 12px 
+		color: $gray-dark 
+		cursor: pointer
+		transition: all .25s
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		+m
+			padding: 24px 0 
+			border-radius: 0
+			border-bottom: 1px solid $border
+		&:before
+			content: ""
+			+coverdiv
+			background: transparent
+			transition: background .25s
+			+m
+				display: none
+		&:hover
+			background: rgba($border, .3) 
+		&.active
+			color: $wh
+			+m
+				color: $gray-dark 
+			&:before
+				background: $purple   
+	&__ava
+		position: relative
+		z-index: 2
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		font-size: 0
+	&__ava > &__pic
+		width: 100% 
+		min-height: 100%
+		border-radius: 50% 
+	&__status
+		position: absolute
+		top: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		background: #FF9A7B 
+		border: 2px solid $wh
+		font-size: 0
+	&__details
+		position: relative
+		z-index: 2
+		flex-grow: 1
+		padding: 0 32px 0 24px
+		+x
+			padding-right: 0
+		+d
+			padding: 0 24px 
+		+m
+			padding: 0 0 0 16px 
+	&__author
+		margin-bottom: 9px
+		color: $text 
+		transition: color .25s 
+	&__details &__line
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 16px
+	&__line &__category
+		margin-right: 8px
+	&__info
+		margin-right: 8px
+		color: $link 
+		transition: color .25s 
+	&__item &__text
+		p
+			+nl
+				margin-bottom: 20px
+	&__item.active
+		.activity__author,
+		.activity__info
+			color: $wh 
+		.activity__author
+			+m
+				color: $text 
+		.activity__info
+			+m
+				color: $link 
+	&__preview
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 96px
+		height: 84px
+		background: $blue-light 
+		border-radius: 8px
+		font-size: 0
+		+x
+			display: none
+		+d
+			display: block
+		+m
+			display: none
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 7px
+			right: 7px
+			height: 7px
+			border-radius: 0 0 7px 7px
+			background: #E7FAFF 
+	&__preview &__pic
+		max-height: 100% 
+	&__btns
+		padding-top: 24px
+		text-align: center
+	&__btn
+		min-width: 180px  
+	+nf
+		margin-top: 48px
+		+m
+			margin-top: 32px
+
++dark
+	.activity
+		&__container
+			background: $dark
+			&:before
+				+shadow-dark
+		&__author
+			color: $wh
+		&__item
+			+m
+				border-color: $border-dark
+		&__item:hover
+			background: rgba($border-dark, .04)
+			+m
+				background: none 
+		&__item.active .activity__author
+			color: $wh 
+
+

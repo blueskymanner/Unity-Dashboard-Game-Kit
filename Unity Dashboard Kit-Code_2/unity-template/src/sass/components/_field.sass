@@ -1,0 +1,35 @@
+.field
+	&__label
+		margin-bottom: 16px
+		font-size: 12px
+		line-height: (16/12) 
+		font-weight: 500
+		color: $gray-light  
+	&__input,
+	&__textarea
+		width: 100%
+		border-radius: 8px
+		background: rgba($border, .3)
+		border: 2px solid transparent 
+		+fi
+		font-size: 14px
+		font-weight: 600
+		color: $text
+		transition: all .25s
+		&:focus
+			border-color: $purple
+			background: $wh       
+	&__input
+		height: 56px
+		padding: 0 23px
+	&__textarea
+		height: 157px
+		padding: 15px 23px
+		resize: none  
+
++dark
+	.field
+		&__input,
+		&__textarea
+			color: $wh 
+			background: rgba($border-dark, .04) 

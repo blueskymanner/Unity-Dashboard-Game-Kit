@@ -1,0 +1,85 @@
+.goal
+	&__container
+		min-height: 220px
+		margin: 0 -16px 26px 
+	&__preview
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 220px
+		font-size: 0
+	&__pic
+		position: relative
+		z-index: 2
+		max-height: 100% 
+	&__bg
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		width: 50%
+		border-radius: 16px 
+	&__item
+		+nl
+			margin-bottom: 32px
+	&__head
+		display: flex
+		margin-bottom: 13px
+	&__percent
+		flex-shrink: 0 
+		margin-left: auto
+		padding-left: 15px
+	&__indicator
+		position: relative
+		height: 8px
+		background: $border
+		border-radius: 4px
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		border-radius: 4px 
+	.owl-carousel .owl-item img
+		width: auto
+	.owl-nav
+		position: absolute
+		top: 0
+		left: 16px
+		z-index: 2
+		display: flex
+	.owl-carousel .owl-nav button.owl-prev,
+	.owl-carousel .owl-nav button.owl-next
+		width: 24px
+		height: 24px
+		background: $wh
+		border-radius: 50%
+		box-shadow: 0 5px 10px #E3E6EC
+		font-size: 0
+		transition: all .25s 
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s
+		&:hover
+			background: $purple
+			.icon
+				fill: $wh
+	.owl-carousel .owl-nav button.owl-prev 
+		margin-right: 8px
+
++dark
+	.goal
+		&__indicator
+			background: $border-dark
+		.owl-carousel .owl-nav button.owl-prev,
+		.owl-carousel .owl-nav button.owl-next
+			background: $dark
+			box-shadow: 0 5px 10px rgba(#000, .3)
+			.icon
+				fill: $wh
+			&:hover
+				background: $purple
+	
+

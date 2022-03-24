@@ -1,0 +1,115 @@
+.slider
+	margin-bottom: 56px
+	+m
+		margin-bottom: 48px
+	&__container
+		position: relative
+		background: $purple 
+		border-radius: 24px 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			background: #CFC8FF 
+			border-radius: 24px 
+		&:before
+			top: 8px
+			left: 8px
+			right: 8px
+			bottom: -8px
+			z-index: -1
+		&:after
+			top: 16px
+			left: 20px
+			right: 20px
+			bottom: -16px
+			z-index: -2
+	&__item
+		display: flex
+		padding: 42px 0 56px 32px
+		color: $wh 
+		+m
+			flex-direction: column-reverse
+			padding: 0 32px 54px 
+			text-align: center
+	&__details
+		flex-shrink: 0
+		width: 185px
+		padding-top: 13px
+		+m
+			width: 100%
+			padding: 0 
+	&__preview
+		margin: 0 auto
+		font-size: 0
+		+m
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 282px
+			height: 282px
+			padding: 20px 
+	&__pic
+		max-width: 214px
+		max-height: 214px
+	&__title
+		margin-bottom: 14px
+	&__text
+		margin-bottom: 14px
+		+m
+			margin-bottom: 24px
+	&__close
+		position: absolute
+		top: 8px
+		right: 8px
+		z-index: 2
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: $wh
+		font-size: 0
+		.icon
+			font-size: 12px
+			transition: transform .25s
+		&:hover .icon
+			transform: rotate(90deg)
+	.owl-dots
+		position: absolute
+		left: 217px
+		right: 0
+		bottom: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		+m
+			left: 0
+			right: 0
+			bottom: 24px
+	.owl-carousel button.owl-dot
+		position: relative
+		width: 12px
+		height: 12px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 4px
+			height: 4px
+			background: $wh
+			border-radius: 50%
+			transition: all .25s
+		&:hover,
+		&.active
+			&:before
+				box-shadow: 0 0 0 2px #A0D7E7   
+		+nl
+			margin-right: 10px
+
++dark
+	.slider
+		&__close
+			background: $dark
+			box-shadow: 0 10px 10px rgba(#000, .3)
+			.icon
+				fill: $wh

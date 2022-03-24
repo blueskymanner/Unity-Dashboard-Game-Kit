@@ -1,0 +1,117 @@
+.quality
+	&__item
+		display: flex
+		align-items: center
+		&_chart
+			position: relative
+			padding-right: 60px
+		&[href]
+			color: $text 
+		+nl
+			margin-bottom: 48px
+	&__preview
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 14px
+		border-radius: 12px 
+		font-size: 0
+	&__preview &__pic
+		max-height: 100% 
+	&__chart
+		position: absolute
+		top: 73%
+		right: -32px
+		transform: translateY(-50%)
+		width: 110px
+		height: 110px
+	&__details
+		position: relative
+		z-index: 2
+		flex-grow: 1
+	&__percent
+		position: absolute
+		top: 39%
+		left: 51%
+		pointer-events: none
+		transform: translate(-50%,-50%)
+	&__info
+		margin-top: 5px
+		color: $gray-dark 
+	&__btn
+		margin-top: 40px
+		&_mt30
+			margin-top: 30px
+	&__line
+		display: flex
+	&__line &__price
+		margin-left: auto
+		padding-left: 10px
+		color: $green 
+	&__category
+		position: relative
+		padding-right: 20px
+		.icon
+			position: absolute
+			top: 5px
+			right: 5px
+			font-size: 10px
+			transition: transform .25s
+	&__money
+		display: inline-block
+		margin-top: 8px
+		padding: 3px 10px
+		background: $purple
+		border-radius: 8px 
+		color: $wh 
+	&_big &__list
+		margin: -8px -16px 
+	&_big &__item
+		position: relative
+		padding: 8px 16px
+		background: transparent
+		border-radius: 12px 
+		transition: all .25s 
+		&:before
+			content: ""
+			position: absolute 
+			top: 100%
+			left: 10px
+			right: 10px
+			height: 0
+			border-radius: 0 0 8px 8px
+			background: $purple-light  
+			transition: height .25s  
+		&:hover
+			background: $purple
+			color: $wh   
+			&:before
+				height: 6px
+		+nl
+			margin-bottom: 24px 
+	&_big &__item:hover &__category
+		color: $wh
+		.icon
+			fill: $wh 
+	&_big &__item:hover &__info
+		color: $wh 
+	&_big &__preview
+		position: relative
+		width: 88px
+		height: 80px
+		margin-right: 24px
+		&:before
+			content: ""
+			position: absolute
+
++dark
+	.quality
+		&__item
+			color: $wh 
+		&__category .icon
+			fill: $wh

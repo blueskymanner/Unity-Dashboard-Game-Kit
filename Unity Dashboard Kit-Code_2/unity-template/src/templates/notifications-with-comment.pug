@@ -1,0 +1,57 @@
+---
+title: Notifications
+---
+extends layouts/_layout
+block content
+	.page.page_other
+		+sidebar('', '', '', '', '', '', '', 'active')
+		.page__wrapper
+			.page__center
+				.page__row.page__row_responsive.page__row_head.page__row_border
+					.page__col
+						.page__hello.h5 Unity Dashboard v.1
+						.page__welcome.h2 Notifications
+					.page__col
+						+header
+				.page__row.page__row_responsive.page__row_border
+					.page__col
+						+notification
+					.page__col
+						.notification
+							.notification__title.h6 From Notification
+							.notification__photo
+								img.notification__pic(src="img/notification-pic.png" alt="")
+							.notification__body
+								.notification__stage.h5 Collab Landing.
+								.notification__parameters
+									.notification__parameter
+										.notification__icon
+											img.notification__pic(src="img/user.svg" alt="")
+										.caption Glenn Greer
+									.notification__parameter
+										.notification__icon
+											img.notification__pic(src="img/clock.svg" alt="")
+										.caption 12h
+								.notification__text.color-gray "Love this so much! What tools do you use to create your 3d illustrations?"
+							.editor
+								.editor__wrap
+									.editor__head
+										.editor__control
+											button.editor__action
+												+i('editor-smile')
+											button.editor__action.active
+												+i('editor-bold')
+											button.editor__action
+												+i('editor-italic')
+											button.editor__action
+												+i('editor-pic')
+										button.editor__add
+									.editor__body
+										.editor__field
+											textarea.editor__textarea(placeholder="text ...")
+								button.editor__btn.btn.btn_black.btn_wide Reply Comment
+
+
+
+
+

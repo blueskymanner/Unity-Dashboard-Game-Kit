@@ -1,0 +1,440 @@
+.schedules
+	&__container
+		position: relative
+		display: flex
+		padding: 32px 32px 32px 16px
+		border-radius: 24px
+		background: $wh
+		+x
+			display: block
+			padding: 0
+			background: none
+			border-radius: 0  
+		&:before
+			content: ""
+			position: absolute
+			top: 35px
+			left: 35px
+			right: 35px
+			bottom: -35px
+			z-index: -5
+			+shadow
+			+x
+				display: none
+	&__col
+		+x
+			position: relative
+			padding: 32px 
+			border-radius: 24px
+			background: $wh  
+			&:before
+				content: ""
+				position: absolute
+				top: 35px
+				left: 35px
+				right: 35px
+				bottom: -35px
+				z-index: -5
+				+shadow
+		&:first-child
+			flex-shrink: 0
+			width: 310px
+			+x
+				width: 100% 
+				margin-bottom: 32px
+			.schedules__title
+				display: none
+				+x
+					display: block
+		&:nth-child(2)
+			flex-grow: 1
+			padding-left: 16px
+			+x
+				padding-left: 32px
+	&__list
+		margin-top: -8px
+		+x
+			display: flex
+			flex-wrap: wrap
+			margin: -32px -32px 0
+		+m
+			display: block
+			margin: 0 -16px 
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		padding: 8px 16px 
+		border-radius: 12px
+		background: transparent  
+		color: $text
+		transition: all .25s
+		+x
+			flex: 0 0 calc(50% - 32px)
+			width: calc(50% - 32px)
+			margin: 32px 16px 0
+		+m
+			flex: 0 0 100%
+			width: 100% 
+			margin: 0
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 10px
+			right: 10px
+			height: 6px
+			border-radius: 0 0 6px 6px
+			background: $purple-light 
+			opacity: 0
+			transition: opacity .25s  
+		&:hover
+			color: $purple 
+			.icon
+				fill: $purple
+		&.active
+			background: $purple
+			color: $wh 
+			&:before
+				opacity: 1
+		+nl
+			margin-bottom: 24px
+			+x
+				margin-bottom: 0
+			+m
+				margin-bottom: 24px
+	&__date
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 88px
+		height: 80px
+		margin-right: 24px
+		padding-top: 7px
+		border-radius: 12px
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 9px
+			right: 9px
+			height: 7px
+			border-radius: 0 0 10px 10px
+		&.bg-pink-light:before
+			background: rgba($pink-light, .5)
+		&.bg-purple-light:before
+			background: rgba($purple-light, .5)
+		&.bg-blue-light:before
+			background: rgba($blue-light, .5)
+		&.bg-yellow-light:before
+			background: rgba($yellow-light, .5)
+	&__name
+		line-height: 1
+		color: $gray-dark
+	&__details
+		flex-grow: 1
+	&__category
+		position: relative
+		display: flex
+		align-items: center
+		margin-bottom: 5px
+		padding-right: 35px
+		.icon
+			position: absolute
+			top: 5px
+			right: 20px
+			font-size: 10px
+			transition: all .25s
+	&__info
+		margin-bottom: 8px
+		color: $gray-dark 
+	&__time
+		display: inline-block
+		padding: 3px 10px
+		background: $purple 
+		border-radius: 8px 
+		color: $wh 
+	&__item.active &__name,
+	&__item.active &__info
+		color: $wh
+	&__item.active &__category .icon
+		transform: translateX(4px)
+		fill: $wh
+	&__item.active &__date
+		background: transparent
+		&:before
+			background: transparent
+	&__item.active &__time
+		background: $pink-light
+		color: $text  
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+		+m
+			margin: -16px 0 20px
+	&__arrows
+		display: none
+		margin-left: auto
+		margin-right: -16px
+		+m
+			display: flex
+	&__arrow
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		box-shadow: 0 5px 20px rgba(#E3E6EC, .85)
+		background: $wh  
+		font-size: 0
+		transition: background .25s
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			background: $purple
+			.icon
+				fill: $wh 
+		+nl
+			margin-right: 8px
+	&__col > &__title
+		margin-bottom: 32px
+	&__btn
+		display: none
+		+x
+			display: inline-block
+			margin-top: 32px
+	&__inner
+		+m
+			display: flex
+			margin: 0 -32px
+			padding-bottom: 32px 
+			
+			overflow: auto
+			overflow-x: auto 
+			-ms-overflow-style: none
+			scrollbar-width: none
+			-webkit-overflow-scrolling: touch
+			&::-webkit-scrollbar
+			  display: none 
+			&:before,
+			&:after
+				content: ""
+				display: inline-block
+				flex-shrink: 0 
+				width: 32px
+				height: 1px 
+	&__graphic
+		position: relative
+		max-width: 586px
+		border-radius: 16px
+		border: 1px solid $border
+		+x
+			max-width: 100%
+		+m
+			min-width: 586px
+			margin-bottom: 7px
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 14px
+			right: 14px
+			height: 7px
+			border-radius: 0 0 7px 7px
+			border-width: 0 1px 1px
+			border-style: solid
+			border-color: $border     
+	&__head
+		display: flex
+		align-items: center
+		height: 68px
+		border-bottom: 1px solid $border 
+	&__option
+		flex-shrink: 0
+		width: 138px
+		padding-left: 32px
+		font-size: 13px
+		font-weight: 600
+		color: $gray-dark  
+	&__week
+		display: flex
+		flex-grow: 1
+	&__cell
+		flex: 0 0 16.666%
+		width: 16.666%
+	&__day
+		position: relative
+		display: inline-block
+		min-width: 32px
+		margin-left: -16px
+		background: transparent 
+		border-radius: 50% 
+		text-align: center
+		font-size: 14px
+		font-weight: 600 
+		line-height: 32px
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			right: -4px
+			width: 10px
+			height: 10px
+			border-radius: 50%  
+		&.active
+			background: $red 
+			color: $wh
+		&.green:before
+			background: $green
+		&.purple:before
+			background: $purple 
+		&.gray:before
+			background: $border 
+	&__body
+		position: relative
+		padding: 26px 0 22px
+	&__grid
+		position: absolute
+		top: 0
+		left: 138px
+		right: 0
+		bottom: 0
+	&__line
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 1px
+		background: $border
+		pointer-events: none
+		&:first-child
+			left: 8.33%
+		&:nth-child(2)
+			left: 25%
+		&:nth-child(3)
+			left: 41.66%
+		&:nth-child(4)
+			left: 58.33%
+		&:nth-child(5)
+			left: 75%
+	&__row
+		position: relative
+		z-index: 2
+		display: flex
+		align-items: center
+		+nl
+			margin-bottom: 18px
+	&__task
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		height: 32px
+		padding: 0 2px 
+		border-radius: 8px
+	&__task &__text
+		padding: 0 15px 
+		background: rgba($wh, .8) 
+		border-radius: 6px
+		font-size: 12px
+		font-weight: 500 
+		line-height: 28px
+		+t
+			padding: 0 10px 
+	&__legend
+		display: flex
+		margin-top: 32px
+		padding: 0 16px 
+		+m
+			flex-wrap: wrap
+			margin-top: -10px
+			padding: 0 
+	&__status
+		position: relative
+		padding-left: 20px
+		font-size: 12px
+		line-height: 1.2
+		font-weight: 500
+		color: $gray-dark 
+		+m
+			margin-top: 10px 
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 12px
+			height: 12px
+			border-radius: 50%
+		&.green:before
+			background: $green 
+		&.purple:before
+			background: $purple
+		&.gray:before
+			background: $border
+		+nl
+			margin-right: 120px
+			+x
+				margin-right: auto
+			+m
+				margin-right: 15px
+	+nl
+		margin-bottom: 36px
+		  
++dark
+	.schedules
+		&__container
+			background: $dark
+			+x
+				background: none 
+			&:before
+				+shadow-dark
+		&__col
+			+x
+				background: $dark  
+				&:before
+					+shadow-dark
+		&__item
+			color: $wh
+		&__category .icon
+			fill: $wh
+		&__name,
+		&__number
+			color: $link
+		&__item:hover
+			color: $purple
+			.icon
+				fill: $purple
+		&__item.active,
+		&__item.active .schedules__number
+			color: $wh 
+		&__item.active .icon
+			fill: $wh
+		&__graphic
+			border-color: $border-dark
+			&:before
+				border-color: $border-dark
+		&__head
+			border-color: $border-dark
+		&__day.gray:before,
+		&__status.gray:before
+			background: $border-dark 
+		&__line
+			background: $border-dark
+		&__task .schedules__text
+			background: rgba($dark, .8) 
+		&__arrow
+			background: $dark
+			box-shadow: 0 5px 20px rgba(#000, .35)  
+			.icon
+				fill: $wh
+		
+		 
+			   
+		
+
+			
+		 

@@ -1,0 +1,100 @@
+.dropdown
+	position: relative
+	&__head
+		position: relative
+		display: flex
+		align-items: center
+		height: 56px
+		padding: 0 46px 0 21px 
+		border: 2px solid transparent
+		background: rgba($border, .3) 
+		border-radius: 16px 
+		font-weight: 600 
+		color: $gray-dark
+		transition: all .25s
+		cursor: pointer
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 20px
+			transform: translateY(-50%)
+			width: 14px
+			height: 8px
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath fill='%231b1d21' d='M.293.293A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+			transition: transform .25s 
+	&__body
+		position: absolute
+		top: calc(100% + 8px)
+		left: 0
+		z-index: 20
+		width: 310px
+		padding: 32px 
+		border: 1px solid $border
+		background: $wh
+		border-radius: 24px
+		visibility: hidden
+		opacity: 0
+		box-shadow: 0 20px 16px rgba(#E3E6EC, .6)
+		transition: all .25s 
+		+d
+			right: 0
+			width: auto
+			padding: 24px 21px
+	&__item
+		display: block
+		+nl
+			margin-bottom: 24px  
+	&__title
+		position: relative
+		margin-bottom: 3px
+		padding-right: 30px
+		color: $text 
+		transition: color .25s 
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			right: 8px
+			width: 6px
+			height: 10px
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10'%3E%3Cpath fill='%2311142d' d='M.293.293A1 1 0 0 1 1.613.21l.094.083 4 4a1 1 0 0 1 .083 1.32l-.083.094-4 4A1 1 0 0 1 .21 8.387l.083-.094L3.585 5 .293 1.707A1 1 0 0 1 .21.387L.293.293z'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto  
+			transition: transform .25s 
+	&__info
+		color: $gray-dark
+		transition: color .25s
+	&__item:hover &__title:before
+		transform: translateX(5px)
+	&__item:hover &__title,
+	&__item:hover &__info
+		color: $purple 
+	&.active &__head
+		border-color: $link
+		background: $wh
+		color: $text
+		&:before
+			transform: translateY(-50%) rotate(180deg)
+	&.active &__body
+		visibility: visible
+		opacity: 1
+
++dark
+	.dropdown
+		&__head
+			background: rgba($border, .04)
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath fill='%23ffffff' d='M.293.293A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6a1 1 0 0 1 0-1.414z'/%3E%3C/svg%3E") 
+		&__body
+			border-color: $border-dark 
+			background: $dark 
+			box-shadow: 0 20px 16px rgba(#000, .5)
+		&__title
+			color: $wh 
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10'%3E%3Cpath fill='%23ffffff' d='M.293.293A1 1 0 0 1 1.613.21l.094.083 4 4a1 1 0 0 1 .083 1.32l-.083.094-4 4A1 1 0 0 1 .21 8.387l.083-.094L3.585 5 .293 1.707A1 1 0 0 1 .21.387L.293.293z'/%3E%3C/svg%3E")
+		&.active .dropdown__head
+			background: rgba($border, .04)
+			color: $wh
+			
+		
