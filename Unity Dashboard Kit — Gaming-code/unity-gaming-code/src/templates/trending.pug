@@ -1,0 +1,177 @@
+---
+title: Trending
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', 'active')
+		.page__wrapper
+			+header
+			.page__slider
+				.page__info.h5 Unity Gaming
+				.page__title.h2 Trending
+				.main.main_trending.js-main
+					.main__body
+						.main__slider.js-slider.js-main-slider
+							mixin slideBig(image)
+								.main__slide
+									.main__item(style="background-image: url(" + image + ");")
+										.main__details
+											.main__live.live.live_big Live
+											.main__title.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs
+											.main__parameters
+												.main__parameter
+													.main__icon
+														img.main__pic(src="img/league-of-legends.png" alt="")
+													.main__text League of Legends®
+												.main__parameter 🇺🇸 English
+											a.main__btn.btn.btn_purple(href="video-live.html") Watch
+							+slideBig('img/main-photo-1.png')
+							+slideBig('img/main-photo-2.png')
+							+slideBig('img/main-photo-1.png')
+							+slideBig('img/main-photo-2.png')
+							+slideBig('img/main-photo-1.png')
+							+slideBig('img/main-photo-2.png')
+							+slideBig('img/main-photo-1.png')
+							+slideBig('img/main-photo-2.png')
+					.main__foot
+						.main__counter.js-main-counter
+						.main__indicator Showing 
+							span.main__status.js-main-status
+			.page__center
+				.trending
+					.trending__row
+						.trending__col
+							.trending__sorting
+								.trending__field.field.mobile-show
+									.field__wrap
+										select.field__select.purple
+											option All 
+											option Game Online 
+											option Game Offline
+								.trending__tags
+									a.trending__tag.trending__tag_all(href='#') All 
+									a.trending__tag(href='#') Game Online 
+									a.trending__tag(href='#') Game Offline
+								.trending__field.field
+									.field__wrap
+										select.field__select
+											option Now
+											option Yesterday
+							.trending__title.h6 Top Trending Now
+							.trending__list
+								mixin card(number, classNumber, image, title, ava)
+									.card
+										.card__inner
+											.card__bg(style="background-image: url(" + image + ");")
+												.card__number(class=classNumber)=number
+											.card__details
+												.card__head
+													.live Live
+													.card__category Shooter
+												.card__title.h6=title
+												.card__status
+													.status.blue 4.2K watching
+													.status.green 1 week ago
+												.card__user
+													.card__ava
+														img.card__pic(src=ava alt="")
+													.card__desc
+														.card__man.confirm Gabriel Erickson 
+														.card__game Call of Duty
+										.card__actions
+											button.card__action
+												+i('reply')
+											button.card__action
+												+i('play-square')
+											button.card__action
+												+i('heart')
+								+card('', 'card__number_crown', 'img/card-pic-1.png', 'Spectating the Pros - Fly Santorin, PowerofEvil - New Caps vs PoE', 'img/ava-1.png')
+								+card('2', '', 'img/card-pic-2.png', 'Spectating the Pros - Fly Santorin, PowerofEvil - New Caps vs PoE', 'img/ava-2.png')
+								+card('3', '', 'img/card-pic-3.png', 'New Sub Emotes And Badges! Lets goooo', 'img/ava-3.png')
+								+card('4', '', 'img/card-pic-4.png', 'Spectating the Pros - Fly Santorin, PowerofEvil - New Caps vs PoE', 'img/ava-4.png')
+								+card('5', '', 'img/card-pic-1.png', 'Spectating the Pros - Fly Santorin, PowerofEvil - New Caps vs PoE', 'img/ava-1.png')
+								+card('6', '', 'img/card-pic-2.png', 'Spectating the Pros - Fly Santorin, PowerofEvil - New Caps vs PoE', 'img/ava-2.png')
+							.trending__btns
+								button.trending__btn.btn.btn_gray Load More
+						.trending__col
+							.trending__item.trending__item_streamers
+								.trending__title.h6 Trending Streamers
+								.trending__group.js-slider-streamers.js-slider-resize
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-1.png" alt="")
+											.trending__desc
+												.trending__man.confirm Unity Gaming 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-2.png" alt="")
+											.trending__desc
+												.trending__man Daniel Brothers 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-3.png" alt="")
+											.trending__desc
+												.trending__man Amazing Channel 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-4.png" alt="")
+											.trending__desc
+												.trending__man.confirm Dash UI8 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+									.trending__slide
+										a.trending__user(href="#")
+											.trending__ava
+												img.trending__pic(src="img/ava-5.png" alt="")
+											.trending__desc
+												.trending__man.confirm Tran Mau Tri Tam 
+												.trending__game Call of Duty
+												.status.orange 2.8K viewers
+								button.trending__btn.btn.btn_gray.btn_wide Discover More
+							.trending__item
+								.trending__title.h6 Trending Games
+								.trending__slider.js-slider-games.js-slider-resize
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-1.png" alt="")
+											.trending__details
+												.trending__game Call of Duty®
+												.trending__text The massive free-to-play experience from the world of Modern Warfare.
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-2.png" alt="")
+											.trending__details
+												.trending__game Counter-Strike®
+												.trending__text Counter-Strike is a series of multiplayer first-person shooter video games
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-3.png" alt="")
+											.trending__details
+												.trending__game Fortnite®
+												.trending__text Live tournaments, match highlights, and your favorite pro players all in one place
+									.trending__slide
+										a.trending__box(href="#")
+											.trending__preview
+												img.trending__pic(src="img/game-pic-4.png" alt="")
+											.trending__details
+												.trending__game League of Legends® 
+												.trending__text League of Legends is a team-based game with over 140 champions. 
+								button.trending__btn.btn.btn_gray.btn_wide Discover More
+
+							
+
+				

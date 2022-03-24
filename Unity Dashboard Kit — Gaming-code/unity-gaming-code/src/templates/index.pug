@@ -1,0 +1,80 @@
+---
+title: New feed
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.main.js-main
+				.main__container
+					.main__for.js-slider.js-main-for
+						mixin slideBig(image)
+							.main__slide
+								.main__item(style="background-image: url(" + image + ");")
+									.main__details
+										.main__live.live.live_big Live
+										.main__title.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs
+										.main__parameters
+											.main__parameter
+												.main__icon
+													img.main__pic(src="img/league-of-legends.png" alt="")
+												.main__text League of Legends®
+											.main__parameter 🇺🇸 English
+										button.main__btn.btn.btn_purple Watch
+						+slideBig('img/main-pic-1.png')
+						+slideBig('img/main-pic-2.jpg')
+						+slideBig('img/main-pic-3.jpg')
+						+slideBig('img/main-pic-4.jpg')
+						+slideBig('img/main-pic-1.png')
+						+slideBig('img/main-pic-2.jpg')
+						+slideBig('img/main-pic-3.jpg')
+						+slideBig('img/main-pic-4.jpg')
+					.main__nav.js-main-nav
+						mixin slideSm(image)
+							.main__preview(style="background-image: url(" + image + ");")
+						+slideSm('img/main-pic-1.png')
+						+slideSm('img/main-pic-2.jpg')
+						+slideSm('img/main-pic-3.jpg')
+						+slideSm('img/main-pic-4.jpg')
+						+slideSm('img/main-pic-1.png')
+						+slideSm('img/main-pic-2.jpg')
+						+slideSm('img/main-pic-3.jpg')
+						+slideSm('img/main-pic-4.jpg')
+					.main__line
+						.main__progress.js-main-progress(role="progressbar" aria-valuemin="0" aria-valuemax="100")
+							span.main__label.js-slider-label.sr-only
+			.page__center
+				.collection
+					.collection__head
+						.collection__title.h5 Live channels
+						.collection__field.field
+							.field__wrap
+								select.field__select
+									option Popular
+									option New
+									option Free
+					.collection__list
+						+card('img/card-pic-1.png', '2020 World Champs Gaming Warzone', 'img/ava-1.png', 'confirm', 'Tam Tran', 'Call of Duty®')
+						+card('img/card-pic-2.png', 'Team Flash vs. Saigon phantom', 'img/ava-2.png', 'confirm', 'Dash UI8', 'Garena of Valor')
+						+card('img/card-pic-3.png', '2020 World Champs Gaming Warzone', 'img/ava-3.png', 'confirm', 'UI8 Gaming', 'Call of Duty®')
+						+card('img/card-pic-4.png', '2020 World Champs Gaming Warzone', 'img/ava-4.png', '', 'Gabriel Erickson', 'Garena Free Fire')
+				+users('From Channels You Follow')
+				+categories('Popular Categories')
+				.collection
+					.collection__head
+						.collection__title.h5 Recommended Videos
+						.collection__field.field
+							.field__wrap
+								select.field__select
+									option Most Recent
+									option New
+									option Free
+					.collection__list
+						+card('img/card-pic-1.png', '2020 World Champs Gaming Warzone', 'img/ava-1.png', 'confirm', 'Tam Tran', 'Call of Duty®')
+						+card('img/card-pic-2.png', 'Team Flash vs. Saigon phantom', 'img/ava-2.png', 'confirm', 'Dash UI8', 'Garena of Valor')
+						+card('img/card-pic-3.png', '2020 World Champs Gaming Warzone', 'img/ava-3.png', 'confirm', 'UI8 Gaming', 'Call of Duty®')
+						+card('img/card-pic-4.png', '2020 World Champs Gaming Warzone', 'img/ava-4.png', '', 'Gabriel Erickson', 'Garena Free Fire')
+
+

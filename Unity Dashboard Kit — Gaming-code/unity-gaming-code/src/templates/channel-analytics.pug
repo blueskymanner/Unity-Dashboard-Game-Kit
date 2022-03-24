@@ -1,0 +1,184 @@
+---
+title: Channel analytics
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', '', '', '', '', 'active')
+		.page__wrapper
+			+header
+			.page__center
+				.page__title.h2 Channel Analytics
+				.page__search
+					.page__field
+						input.page__input(type="text" placeholder="Search")
+						button.page__open
+							+i('search')
+					.field
+						.field__wrap
+							select.field__select.blue
+								option Category
+								option Video
+					.page__btns
+						button.page__btn.btn.btn_purple Category
+						button.page__btn.btn.btn_white Video
+				.page__row
+					.page__col
+						.details.details_big
+							.details__container
+								.details__title.h6 Real-time Users Active 💡
+								.details__row
+									.details__col
+										.details__top
+											.details__number.h1 687
+											a.details__line(href="#")
+												.details__preview
+													img.details__pic(src="img/details-pic.png" alt="")
+												.details__info.caption-sm Views per minute
+										.details__bottom
+											.details__statistics
+												.details__chart.details__chart_activity
+													div#chart-active-users
+												.details__status
+													.details__icon.bg-blue
+														+i('arrow-down-fat')
+													.details__percent.caption-sm.color-blue 6%
+											.details__info.caption-sm.color-gray Update your payout method in Settings
+									.details__col
+										.details__box
+											.details__chart.details__chart_counter
+												div#chart-users-counter
+											button.details__remove
+												+i('remove')
+								.details__list
+									.details__item
+										.details__head
+											.details__preview.bg-purple
+												img.details__pic(src="img/folder.svg" alt="")
+											.details__text.caption-sm Users
+										.details__counter.h3 1.5m
+										.details__indicator
+											.details__progress.bg-purple(style="width: 55%;")
+									.details__item
+										.details__head
+											.details__preview.bg-pink
+												img.details__pic(src="img/activity.svg" alt="")
+											.details__text.caption-sm Clicks
+										.details__counter.h3 1m
+										.details__indicator
+											.details__progress.bg-pink(style="width: 52%;")
+									.details__item
+										.details__head
+											.details__preview.bg-blue
+												img.details__pic(src="img/bag.svg" alt="")
+											.details__text.caption-sm Subscribers
+										.details__counter.h3 529k
+										.details__indicator
+											.details__progress.bg-blue(style="width: 55%;")
+									.details__item
+										.details__head
+											.details__preview.bg-orange
+												img.details__pic(src="img/chat.svg" alt="")
+											.details__text.caption-sm Earning
+										.details__counter.h3 478$
+										.details__indicator
+											.details__progress.bg-orange(style="width: 68%;")
+						.views
+							.views__head
+								.views__title.h6 Your top videos in this period
+								.field
+									.field__wrap
+										select.field__select
+											option Date uploaded
+											option New
+											option Free 
+							.views__caption
+								.views__cell Video
+								.views__cell Views
+								.views__cell Average view duration
+							.views__list
+								mixin viewsItem(image)
+									.views__item
+										.views__preview(style="background-image: url(" + image + ");")
+										.views__details
+											.views__box
+												.views__info The Results Are Now – Call of Duty
+												.views__game
+													.views__logo
+														img.views__pic(src="img/call-of-duty.png" alt="")
+													.views__text Call of Duty®
+											.status.blue 8.1M views
+											.status.green 10:42 (9.86%)
+											button.views__action
+												+i('menu-fill')
+								+viewsItem('img/card-pic-1.png')
+								+viewsItem('img/card-pic-2.png')
+								+viewsItem('img/card-pic-3.png')
+								+viewsItem('img/card-pic-4.png')
+								+viewsItem('img/card-pic-5.png')
+								+viewsItem('img/card-pic-6.png')
+								+viewsItem('img/card-pic-1.png')
+							.views__btns
+								button.views__btn.btn.btn_gray More Results
+					.page__col
+						.widget.widget_center.widget_shadow.widget_earning
+							.widget__chart
+								div#chart-users-blue
+							.widget__title.title Earning this month
+							.widget__counter.title.title_md.color-purple 456
+							.widget__text.color-gray Update your payout method in Settings
+							button.widget__btn.btn.btn_purple.btn_wide Withdraw All Earning
+						.widget.widget_videos
+							.widget__title.h6 Latest Video
+							.widget__slider.js-slider-videos
+								mixin widgetSlide(image)
+									.widget__slide
+										.player.player_sm
+											.player__container
+												.player__view(style="background-image: url(" + image + ");")
+													.player__control
+														.player__actions
+															button.player__action
+																+i('play')
+																+i('pause')
+															.player__volume
+																button.player__action
+																	+i('sound-off')
+																	+i('sound-on')
+																.player__line
+																	.player__progress(style="width: 50%;")
+														.player__actions
+															button.player__action
+																+i('settings-fill')
+															button.player__action
+																+i('play-window')
+															button.player__action
+																+i('full-screen')
+												.player__body
+													.live.live_big Live
+													.player__info.h6 Renegades vs Chiefs  - ESL Pro League
+													.player__parameters
+														.player__parameter
+															.player__icon
+																img.player__pic(src="img/league-of-legends.png" alt="")
+															.player__text League of Legends®
+														.player__parameter 🇺🇸 English
+										.widget__parameters
+											.widget__group
+												.widget__parameter
+													.widget__category View
+													.widget__value 8.5M 
+												.widget__parameter
+													.widget__category Impressions
+													.widget__value 137.5%
+												.widget__parameter
+													.widget__category Average view duration
+													.widget__value 4:30
+											button.widget__btn.btn.btn_gray More Detail 
+								+widgetSlide('img/bg-player-1.png')
+								+widgetSlide('img/bg-player.png')
+								+widgetSlide('img/bg-player-1.png')
+
+
+
+				

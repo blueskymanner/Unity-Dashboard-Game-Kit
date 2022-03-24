@@ -1,0 +1,214 @@
+---
+title: Video live
+---
+extends layouts/_layout
+block content
+	.page.toggle
+		+sidebar('', '', '', '', '', '', '', '', '', 'active video')
+		.page__wrapper
+			+header
+			.page__center
+				.player.player_solo
+					.player__wrapper
+						.player__container
+							.player__view(style="background-image: url('img/bg-player.png');")
+								.player__counter 24K Watching
+								button.player__toggle
+									+i('play')
+									+i('pause')
+								button.player__chat
+									+i('chat')
+								.player__control
+									.player__actions
+										button.player__action
+											+i('play')
+											+i('pause')
+										.player__volume
+											button.player__action
+												+i('sound-off')
+												+i('sound-on')
+											.player__line
+												.player__progress(style="width: 50%;")
+									.player__actions
+										button.player__action
+											+i('settings-fill')
+										button.player__action
+											+i('play-window')
+										button.player__action
+											+i('full-screen')
+							.player__body
+								.player__row
+									.player__inner
+										.live.live_big Live
+										.player__info.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs 
+										.player__parameters
+											.player__parameter
+												.player__icon
+													img.player__pic(src="img/league-of-legends.png" alt="")
+												.player__text League of Legends®
+											.player__parameter 🇺🇸 English
+									.player__cards
+										img.player__pic(src="img/cards.png" alt="")
+										.player__caption Season II
+								.player__btns
+									button.player__btn.btn.btn_gray
+										+i('like') 
+										span.btn__text Like
+									button.player__btn.btn.btn_gray
+										+i('share-1') 
+										span.btn__text Share
+									button.player__btn.btn.btn_gray 
+										+i('add') 
+										span.btn__text Add to Playlist
+									button.player__btn.btn.btn_gray.btn_square
+										+i('dots-border')
+						.messenger
+							.messenger__head
+								.messenger__title.h6.mr-auto Live chat room
+								button.messenger__full
+									+i('arrow-up-right')
+								button.messenger__close
+									+i('close')
+							.messenger__body
+								.messenger__list
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-1.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Corey Diaz
+												.messenger__time 1m
+											.messenger__group
+												mixin message(text)
+													.messenger__text
+														=text
+														button.messenger__report
+															+i('menu-vertical')
+															.messenger__tooltip Report
+												+message('Hey team, 😎')
+												+message('Avoid combat, watch the jungle')
+												+message('Focus on the tower 🐝')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-2.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Terry Hodges
+												.messenger__time 1m
+											.messenger__group
+												+message('Rush trying so hard to carry monkeys')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-3.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Kevin Carpenter
+												.messenger__time 1m
+											.messenger__group
+												+message('Great!')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-4.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Julian Parks
+												.messenger__time 1m
+											.messenger__group
+												+message('Rush trying so hard to carry monkeys')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-5.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Don Mann
+												.messenger__time 1m
+											.messenger__group
+												+message('Great!')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-1.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Corey Diaz
+												.messenger__time 1m
+											.messenger__group
+												+message('Hey team, 😎')
+												+message('Avoid combat, watch the jungle')
+												+message('Focus on the tower 🐝')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-2.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Terry Hodges
+												.messenger__time 1m
+											.messenger__group
+												+message('Rush trying so hard to carry monkeys')
+									.messenger__item
+										.messenger__ava
+											img.messenger__pic(src="img/ava-3.png" alt="")
+										.messenger__details
+											.messenger__top
+												.messenger__man Kevin Carpenter
+												.messenger__time 1m
+											.messenger__group
+												+message('Great!')
+								.messenger__foot
+									input.messenger__input(type="text" placeholder="Send a message…")
+									button.messenger__btn.btn.btn_purple Send
+									button.messenger__smile
+										+i('editor-smile')
+				.author.author_full
+					.author__row
+						.author__col
+							.author__details
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.author__wrap
+									.author__flex
+										.author__box
+											.author__man.h3.confirm Dylan Hodges
+											.author__parameters
+												.author__parameter.h6 536K followers
+												.author__parameter.h6 120 videos
+											.author__note A League of Legends player. For business inquiries contact: dylan@ui8.net
+										.author__btns
+											button.author__btn.btn.btn_purple Message
+											button.author__btn.btn.btn_asphalt.btn_square
+												+i('profile-check')
+									.games
+										+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+										+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+						.author__col
+							.author__group
+								.author__line
+									.author__category Song
+									.author__value If Looks Could Kill
+								.author__line
+									.author__category Artist
+									.author__value Alan Walker
+								.author__line
+									.author__category Album
+									.author__value League of Legends® Music
+								.author__line
+									.author__category Licensed to
+									.author__value Unity Gaming
+								.author__line
+									.author__category Language
+									.author__value 🇺🇸 English
+							.author__foot
+								button.author__btn.btn.btn_gray More Detail 
+								button.author__btn.btn.btn_gray Explore More
+				.catalog.catalog_channel
+					.catalog__nav
+						a.catalog__link.active(href='#') Videos
+						a.catalog__link(href='#') About
+						a.catalog__link(href='#') Stories
+						a.catalog__link(href='#') Schedules 
+					.catalog__list
+						+game('img/card-pic-1.png', true)
+						+game('img/card-pic-2.png', true)
+						+game('img/card-pic-3.png', true)
+						+game('img/card-pic-4.png', true)
+					.catalog__btns
+						button.catalog__btn.btn.btn_gray Load More

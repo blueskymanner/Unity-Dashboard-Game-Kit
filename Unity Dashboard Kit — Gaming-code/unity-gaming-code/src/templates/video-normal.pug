@@ -1,0 +1,200 @@
+---
+title: Video normal
+---
+extends layouts/_layout
+block content
+	.page.toggle
+		+sidebar('', '', '', '', '', '', '', '', '', 'active video')
+		.page__wrapper
+			+header
+			.page__center
+				.videos
+					.player.player_solo
+						.player__container
+							.player__view(style="background-image: url('img/bg-player.png');")
+								.player__counter 24K Watching
+								button.player__toggle
+									+i('play')
+									+i('pause')
+								.player__control
+									.player__actions
+										button.player__action
+											+i('play')
+											+i('pause')
+										.player__volume
+											button.player__action
+												+i('sound-off')
+												+i('sound-on')
+											.player__line
+												.player__progress(style="width: 50%;")
+									.player__actions
+										button.player__action
+											+i('settings-fill')
+										button.player__action
+											+i('play-window')
+										button.player__action
+											+i('full-screen')
+							.player__body
+								.player__row
+									.player__inner
+										.live.live_big Live
+										.player__info.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs 
+										.player__parameters
+											.player__parameter
+												.player__icon
+													img.player__pic(src="img/league-of-legends.png" alt="")
+												.player__text League of Legends®
+											.player__parameter 🇺🇸 English
+									.player__cards
+										img.player__pic(src="img/cards.png" alt="")
+										.player__caption Season II
+								.player__btns
+									button.player__btn.btn.btn_gray
+										+i('like') 
+										span.btn__text Like
+									button.player__btn.btn.btn_gray
+										+i('share-1') 
+										span.btn__text Share
+									button.player__btn.btn.btn_gray 
+										+i('add') 
+										span.btn__text Add to Playlist
+									button.player__btn.btn.btn_gray.btn_square
+										+i('dots-border')
+					.videos__wrap
+						.videos__title.h6 Up Next Videos
+						.videos__list
+							mixin video(image)
+								a.videos__item(href='#')
+									.videos__preview(style="background-image: url(" + image + ");")
+										.videos__time 10:42
+									.videos__details
+										.videos__name The Results Are  Now – Call of Duty
+										.status.green 3 months ago
+										.videos__author
+											.videos__ava
+												img.videos__pic(src="img/ava-6.png" alt="")
+											.videos__text Ronnie Klein
+							+video('img/card-pic-1.png')
+							+video('img/card-pic-2.png')
+							+video('img/card-pic-3.png')
+							+video('img/card-pic-4.png')
+							+video('img/card-pic-5.png')
+				.author.author_full
+					.author__row
+						.author__col
+							.author__details
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.author__wrap
+									.author__flex
+										.author__box
+											.author__man.h3.confirm Dylan Hodges
+											.author__parameters
+												.author__parameter.h6 536K followers
+												.author__parameter.h6 120 videos
+											.author__note A League of Legends player. For business inquiries contact: dylan@ui8.net
+										.author__btns
+											button.author__btn.btn.btn_purple Message
+											button.author__btn.btn.btn_asphalt.btn_square
+												+i('profile-check')
+									.games
+										+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+										+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+						.author__col
+							.author__group
+								.author__line
+									.author__category Song
+									.author__value If Looks Could Kill
+								.author__line
+									.author__category Artist
+									.author__value Alan Walker
+								.author__line
+									.author__category Album
+									.author__value League of Legends® Music
+								.author__line
+									.author__category Licensed to
+									.author__value Unity Gaming
+								.author__line
+									.author__category Language
+									.author__value 🇺🇸 English
+							.author__foot
+								button.author__btn.btn.btn_gray More Detail 
+								button.author__btn.btn.btn_gray Explore More
+				.comments
+					.comments__row
+						.comments__container
+							.comments__head
+								.comments__title.h5 Comments
+								.comments__field.field
+									.field__wrap
+										select.field__select
+											option Now
+											option New
+											option Free
+							.comments__list
+								mixin comment
+									.comments__item
+										.comments__ava
+											img.comments__pic(src="img/ava-1.png" alt="")
+										.comments__details
+											.comments__top
+												.comments__author Joel Becker
+												.comments__time 12h
+											.comments__text Can anyone tell me the settings for character voice lines cause its so boring to play without no characters lines....
+											.comments__actions
+												button.comments__action
+													+i('comment')
+												button.comments__action
+													+i('star-fill')
+												button.comments__action
+													+i('menu-fill')
+								+comment
+								+comment
+								+comment
+								+comment
+								+comment
+								+comment
+							.comments__btns
+								button.comments__btn.btn.btn_purple Load More
+						.comments__sidebar
+							.trending
+								.trending__title.h6 Trending Streamers
+								.trending__group
+									a.trending__user(href="#")
+										.trending__ava
+											img.trending__pic(src="img/ava-1.png" alt="")
+										.trending__desc
+											.trending__man.confirm Unity Gaming 
+											.trending__game Call of Duty
+											.status.orange 2.8K viewers
+									a.trending__user(href="#")
+										.trending__ava
+											img.trending__pic(src="img/ava-2.png" alt="")
+										.trending__desc
+											.trending__man Daniel Brothers 
+											.trending__game Call of Duty
+											.status.orange 2.8K viewers
+									a.trending__user(href="#")
+										.trending__ava
+											img.trending__pic(src="img/ava-3.png" alt="")
+										.trending__desc
+											.trending__man Amazing Channel 
+											.trending__game Call of Duty
+											.status.orange 2.8K viewers
+									a.trending__user(href="#")
+										.trending__ava
+											img.trending__pic(src="img/ava-4.png" alt="")
+										.trending__desc
+											.trending__man.confirm Dash UI8 
+											.trending__game Call of Duty
+											.status.orange 2.8K viewers
+									a.trending__user(href="#")
+										.trending__ava
+											img.trending__pic(src="img/ava-5.png" alt="")
+										.trending__desc
+											.trending__man.confirm Tran Mau Tri Tam 
+											.trending__game Call of Duty
+											.status.orange 2.8K viewers
+								button.trending__btn.btn.btn_gray Discover More
+
+

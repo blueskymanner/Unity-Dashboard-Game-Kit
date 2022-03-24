@@ -1,0 +1,432 @@
+mixin i(name)
+	svg.icon(class='icon-' + name)
+		use(xlink:href='img/sprite.svg#icon-' + name)
+
+mixin sidebar(item1, item2, item3, item4, item5, item6, item7, item8, item9, classSidebar)
+	.sidebar(class=classSidebar)
+		.sidebar__top
+			a.sidebar__logo(href="index.html")
+				img.sidebar__pic.sidebar__pic_black(src="img/logo.svg" alt="")
+				img.sidebar__pic.sidebar__pic_white(src="img/logo-white.svg" alt="")
+			button.sidebar__burger
+			button.sidebar__close
+				+i('close')
+		.sidebar__wrapper
+			.sidebar__inner
+				.sidebar__group
+					.sidebar__caption.caption-sm <span>New </span>Feeds
+					.sidebar__menu
+						a.sidebar__item(href="index.html" class=item1)
+							.sidebar__icon
+								+i('game-play')
+							.sidebar__text News Feed
+						a.sidebar__item(href="trending.html" class=item2)
+							.sidebar__icon
+								+i('trending')
+							.sidebar__text Trending
+						a.sidebar__item(href="following.html" class=item3)
+							.sidebar__icon
+								+i('profile')
+							.sidebar__text Following
+						a.sidebar__item(href="your-videos.html" class=item4)
+							.sidebar__icon
+								+i('camera')
+							.sidebar__text Your Videos
+							.sidebar__add
+								+i('add')
+						a.sidebar__item(href="playlist.html" class=item5)
+							.sidebar__icon
+								+i('document')
+							.sidebar__text Playlist
+				.sidebar__group
+					.sidebar__caption.caption-sm Following
+					.sidebar__list
+						a.sidebar__item(href="channel-profile.html" class=item6)
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-1.png" alt="")
+							.sidebar__text Dylan Hodges
+						a.sidebar__item.online(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-2.png" alt="")
+							.sidebar__text Vincent Parks
+						a.sidebar__item(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-3.png" alt="")
+							.sidebar__text Richard Bowers
+						a.sidebar__item(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-4.png" alt="")
+							.sidebar__text Isaac Lambert
+						a.sidebar__item.online(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-2.png" alt="")
+							.sidebar__text Lillie Nash
+						a.sidebar__item(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-5.png" alt="")
+							.sidebar__text Edith Cain
+						a.sidebar__item.online(href="channel-profile.html")
+							.sidebar__ava
+								img.sidebar__pic(src="img/ava-1.png" alt="")
+							.sidebar__text Jerry Sherman
+					a.sidebar__more(href="#")
+						.sidebar__arrow
+							+i('arrow-down')
+						.sidebar__text Load more
+				.sidebar__group
+					.sidebar__caption.caption-sm <span>Unity </span>Gaming
+					.sidebar__menu
+						a.sidebar__item(href="chat.html" class=item7)
+							.sidebar__icon
+								+i('chat')
+							.sidebar__text Chat
+							.sidebar__counter 20
+						a.sidebar__item.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in")
+							.sidebar__icon
+								+i('settings')
+							.sidebar__text Settings
+						a.sidebar__item(href="channel-analytics.html" class=item9)
+							.sidebar__icon
+								+i('chart')
+							.sidebar__text Analytics
+			.sidebar__banner
+				.sidebar__bg(style="background-image: url('img/sidebar-banner.png');")
+				button.sidebar__remove
+					+i('remove')
+				.sidebar__details
+					.sidebar__title.h5 Join the  Unity&nbsp;Gaming
+					.sidebar__info.caption-sm Discover the best live streams anywhere.
+					button.sidebar__btn.btn.btn_purple.btn_wide Join Now
+		.sidebar__bottom
+			label.switch.switch_theme.js-switch-theme
+				input.switch__input(type="checkbox")
+				span.switch__in
+					span.switch__box
+					span.switch__icon
+						+i('moon')
+						+i('sun')
+			a.sidebar__download(href="#")
+				+i('download')
+
+mixin header
+	.header
+		button.header__burger
+		.header__item.header__item_browse.js-header-item
+			.header__head.js-header-head
+				+i('location')
+				| Browse
+				+i('arrow-down')
+			.header__body
+				a.header__line(href="browse.html")
+					.header__icon
+						+i('star')
+					.header__text Popular Categories
+				a.header__line(href="browse.html")
+					.header__icon
+						+i('star')
+					.header__text Hot Streamers
+				a.header__line(href="browse.html")
+					.header__icon
+						+i('star')
+					.header__text Trending Videos
+				a.header__line(href="sign-in.html")
+					.header__icon
+						+i('star')
+					.header__text Sign In
+				a.header__line(href="sign-up.html")
+					.header__icon
+						+i('star')
+					.header__text Sign Up
+				a.header__line.js-popup-open(href="#popup-stories")
+					.header__icon
+						+i('star')
+					.header__text Stories
+		form.header__search
+			input.header__input(type="text" placeholder="Search Everything")
+			button.header__btn-search
+				+i('search')
+		.header__control
+			.header__item.header__item_add.js-header-item
+				button.header__head.js-header-head
+					+i('plus-sm')
+				.header__body.js-header-body
+					a.header__line(href="upload-videos.html")
+						.header__icon
+							+i('camera')
+						.header__text New Video
+						.header__icon
+							+i('add')
+					a.header__line(href="#")
+						.header__icon
+							+i('star')
+						.header__text Go live
+						.header__icon
+							+i('live')
+			a.header__item.header__item_search(href="#")
+				+i('search')
+			.header__item.header__item_notifications.js-header-item
+				button.header__head.js-header-head
+					+i('bell')
+					.header__counter 2
+				.header__body.js-header-body
+					.notifications
+						.notifications__info.h6 Recent Notification
+						.notifications__list
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-1.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 8h
+									.notifications__text Commented on <span class="notifications__project">The Results Are Beautif</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-2.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Glenn Greer
+										.notifications__time 12h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-3.png" alt="")
+									.notifications__status.bg-blue
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 13h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-4.png" alt="")
+									.notifications__status.bg-green
+										img.notifications__pic(src="img/chat.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 19h
+									.notifications__text Commented on <span class="notifications__project">Your Latest Video</span>
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-2.png" alt="")
+									.notifications__status.bg-purple
+										img.notifications__pic(src="img/message.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Sarah Saunders
+										.notifications__time 21h
+									.notifications__text Sent you a message 📪 
+							a.notifications__item(href="#")
+								.notifications__ava
+									img.notifications__pic(src="img/ava-5.png" alt="")
+									.notifications__status.bg-orange
+										img.notifications__pic(src="img/heart.svg" alt="")
+								.notifications__details
+									.notifications__line
+										.notifications__user Glenn Greer
+										.notifications__time 24h
+									.notifications__text Liked <span class="notifications__project">Your Latest Video</span>
+		.header__item.header__item_profile
+			a.header__head(href="#")
+				img.header__pic(src="img/avatar.png" alt="")
+			.header__body
+				a.header__link(href='#')
+					.header__img
+						+i('profile')
+					| Profile
+				a.header__link(href='playlist.html')
+					.header__img
+						+i('document')
+					| My Playlist
+				a.header__link(href='channel-profile.html')
+					.header__img
+						+i('joystick')
+					| My Channel
+				a.header__link.js-popup-open(href="#popup-settings" data-effect="mfp-zoom-in")
+					.header__img
+						+i('settings')
+					| Settings
+				a.header__link(href='#')
+					.header__img
+						+i('logout')
+					| Log Out
+
+
+mixin card(src, title, ava, classStatus, man, game)
+	a.card(href="#")
+		.card__preview
+			img.card__pic(src=src)
+		.card__body
+			.card__title.h6=title
+			.card__user
+				.card__ava
+					img.card__pic(src=ava alt="")
+				.card__desc
+					.card__man(class=classStatus)=man
+					.card__game=game
+		.card__foot
+			.live Live
+			.status.blue 4.2K watching
+
+mixin users(title)
+	.users
+		.users__container
+			.users__info.h6=title 
+			.users__list
+				a.users__item.users__item_add(href="#")
+					.users__add
+						+i('plus')
+					.users__title Add Yours 
+				a.users__item(href="#")
+					.ava.ava_online
+						img.ava__pic(src="img/ava-1.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_play
+						img.ava__pic(src="img/ava-2.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_online-blue
+						img.ava__pic(src="img/ava-3.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_network
+						img.ava__pic(src="img/ava-4.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_network
+						img.ava__pic(src="img/ava-5.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_online
+						img.ava__pic(src="img/ava-1.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+				a.users__item(href="#")
+					.ava.ava_play
+						img.ava__pic(src="img/ava-2.png" alt="")
+					.users__title Gabriel  Erickson 
+					.users__time 14m ago
+
+mixin categories(info)
+	.categories
+		.categories__info.h5=info
+		.categories__list
+			.categories__item.categories__item_big
+				.categories__slider.js-slider-categories
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+									.categories__tag ESport
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+					.categories__slide
+						.categories__box
+							.categories__preview(style="background-image: url('img/categories-pic-1.png');")
+							.categories__details
+								.categories__tags
+									.categories__tag MOBA
+									.categories__tag ESport
+								.categories__title.h5 League of Legends®
+								.status.green 4.9K Viewers
+								button.categories__btn.btn.btn_purple Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-2.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Fortnite
+					.status.green 4.9K Viewers
+					button.categories__btn.btn.btn_gray Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-3.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Call of Duty
+					.status.green 125K Viewers
+					button.categories__btn.btn.btn_gray Follow
+			.categories__item.categories__item_sm
+				.categories__preview(style="background-image: url('img/categories-pic-4.png');")
+				.categories__details
+					.categories__tags
+						.categories__tag Shooter
+					.categories__title.h6 Call of Duty
+					.status.green 4.9K Viewers
+					button.categories__btn.btn.btn_gray Follow
+
+mixin gamesItem(src, title, category, classItem)
+	a.games__item(href="#" class=classItem)
+		.games__preview
+			img.games__pic(src=src)
+		.games__details
+			.games__title=title
+			.games__category=category
+			.status.orange 2.8K viewers
+
+mixin game(image, actions)
+	.game
+		.game__preview(style="background-image: url(" + image + ");")
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__in
+					span.checkbox__tick
+			.game__time 10:42
+			.game__line
+				.game__progress(style="width: 65%;")
+		.game__details
+			.game__title The Results Are Now – Call of Duty
+			.game__status
+				.status.blue 8.1M views
+				.status.green 3 months ago
+			.game__name
+				.game__logo
+					img.game__pic(src="img/call-of-duty.png" alt="")
+				.game__text Call of Duty®
+			if actions
+			else
+				.game__actions
+					button.game__action
+						+i('eye')
+					button.game__action
+						+i('link')
+					button.game__action
+						+i('share')
+					button.game__action
+						+i('wand')
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+---
+title: Upload videos
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', 'active')
+		.page__wrapper
+			+header
+			.page__center
+				.page__info.h5.mobile-hide What’s hot 🔥
+				.page__title.h2.mobile-hide Upload videos
+				.upload.upload_solo
+					.upload__row
+						.upload__col
+							.upload__tabs.js-tabs
+								.upload__nav
+									a.upload__link.js-tabs-link(href="#") Upload Video
+									a.upload__link.js-tabs-link(href="#") Stream Videos
+								.upload__container
+									.upload__item.js-tabs-item
+										.upload__wrap
+											input.upload__input(type="file")
+											.upload__info.h4 Drag and drop video files
+											.upload__text Setup a stream to start a new live video now 
+											button.upload__btn.btn.btn_blue(type="submit")
+												+i('upload')
+												span.btn__text Or choose file
+									.upload__item.js-tabs-item
+										.upload__wrap.upload__wrap_image(style="background-image: url('img/bg-upload.png');")
+											.upload__box
+												.upload__info.h4 Start a Live Video
+												.upload__text Setup a stream to start a new live video now  
+												button.upload__btn.btn.btn_orange
+													+i('upload')
+													span.btn__text Live Now
+						.upload__col
+							.upload__stat
+								.upload__cell
+									.upload__head
+										.upload__text.mr-auto.color-gray Other ways to upload
+										a.upload__link(href="#")
+											+i('arrows')
+									button.upload__btn.btn.btn_purple-light(type="button")
+										+i('dropbox')
+										span.btn__text Dropbox
+								.upload__cell
+									.upload__line
+										.upload__progress(style="width: 30%;")
+											.upload__tooltip 30%
+									.upload__note.caption-sm.color-gray Upgrade for up to 7TB with no weekly limits.
+							.widget
+								.widget__head
+									.widget__title.h6 Add to Playlist
+									a.widget__action(href="#")
+										+i('plus-sm')
+								.games.games_add
+									+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+									+gamesItem('img/game-2.png', 'The Dota 2', 'eSport', 'active')
+									+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+									+gamesItem('img/game-4.png', 'Fortnite®', 'Shooting')
+								button.widget__btn.btn.btn_gray.btn_wide Manage Your Playlist
+
+				

@@ -1,0 +1,62 @@
+---
+title: Sign up
+---
+extends layouts/_layout
+block content
+	.page.page_login
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.login(style="background-image: url('img/bg-sign-in.png');")
+				.login__container
+					.login__wrap
+						a.login__logo(href="index.html")
+							img.login__pic(src="img/logo-white.svg" alt="")
+						.login__info A Video Gaming Platfrom UI Kit
+						.games
+							+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+							+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+							+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+						a.login__add(href="#")
+							+i('add-square')
+							| Discover more
+						//- .login__flex
+						//- 	label.switch.switch_theme.js-switch-theme
+						//- 		input.switch__input(type="checkbox")
+						//- 		span.switch__in
+						//- 			span.switch__box
+						//- 			span.switch__icon
+						//- 				+i('moon')
+						//- 				+i('sun')
+						//- 	a.login__download(href="#")
+						//- 		+i('download')
+					.login__form
+						a.login__close(href="index.html")
+							+i('arrow-left')
+						.login__title.h3 Sign up
+						.login__line
+							.login__text Already a user
+							a.login__link(href="#") Login now
+						.login__row
+							.login__col
+								.field
+									.field__label First name
+									.field__wrap
+										input.field__input(type="text")
+							.login__col
+								.field
+									.field__label Last name
+									.field__wrap
+										input.field__input(type="text")
+						.field
+							.field__label Email Address
+							.field__wrap
+								input.field__input(type="email")
+						.field
+							.field__label Password
+							.field__wrap
+								input.field__input(type="password")
+						button.login__btn.btn.btn_purple.btn_wide Continue
+						.login__or Sign up by Open ID
+						button.login__btn.btn.btn_blue.btn_wide Google Account
+

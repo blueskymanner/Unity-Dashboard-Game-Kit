@@ -1,0 +1,99 @@
+---
+title: Following
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', 'active')
+		.page__wrapper
+			+header
+			.page__center
+				+users('From Channels You Follow')
+				.games
+					.games__container
+						.games__slider.js-slider.js-slider-view.js-slider-resize
+							.games__slide
+								+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+							.games__slide
+								+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+							.games__slide
+								+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+							.games__slide
+								+gamesItem('img/game-4.png', 'Fortnite®', 'Shooting')
+				.player
+					.player__title.h5 Live Matches
+					.player__arrows
+						button.player__arrow
+							+i('arrow-prev')
+						button.player__arrow
+							+i('arrow-next')
+					.player__wrapper
+						.player__container
+							.player__view(style="background-image: url('img/bg-player.png');")
+								.player__counter 24K Watching
+								button.player__toggle
+									+i('play')
+									+i('pause')
+								.player__control
+									.player__actions
+										button.player__action
+											+i('play')
+											+i('pause')
+										.player__volume
+											button.player__action
+												+i('sound-off')
+												+i('sound-on')
+											.player__line
+												.player__progress(style="width: 50%;")
+									.player__actions
+										button.player__action
+											+i('settings-fill')
+										button.player__action
+											+i('play-window')
+										button.player__action
+											+i('full-screen')
+							.player__body
+								.live.live_big Live
+								.player__info.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs 
+								.player__parameters
+									.player__parameter
+										.player__icon
+											img.player__pic(src="img/league-of-legends.png" alt="")
+										.player__text League of Legends®
+									.player__parameter 🇺🇸 English
+						.player__list
+							.player__preview
+								img.player__pic(src="img/player-pic-1.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-2.png" alt="")
+								.live Live
+							.player__preview.online
+								img.player__pic(src="img/player-pic-3.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-4.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-1.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-2.png" alt="")
+								.live Live
+							.player__preview.online
+								img.player__pic(src="img/player-pic-3.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-4.png" alt="")
+				.collection
+					.collection__head
+						.collection__title.h5 Today's Videos
+						.collection__field.field
+							.field__wrap
+								select.field__select
+									option Trending
+									option New
+									option Free
+					.collection__list
+						+card('img/card-pic-1.png', '2020 World Champs Gaming Warzone', 'img/ava-1.png', 'confirm', 'Tam Tran', 'Call of Duty®')
+						+card('img/card-pic-2.png', 'Team Flash vs. Saigon phantom', 'img/ava-2.png', 'confirm', 'Dash UI8', 'Garena of Valor')
+						+card('img/card-pic-3.png', '2020 World Champs Gaming Warzone', 'img/ava-3.png', 'confirm', 'UI8 Gaming', 'Call of Duty®')
+						+card('img/card-pic-4.png', '2020 World Champs Gaming Warzone', 'img/ava-4.png', '', 'Gabriel Erickson', 'Garena Free Fire')
+				+categories('🔥 Popular Categories')
+
+

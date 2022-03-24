@@ -1,0 +1,164 @@
+.color
+	&-blue
+		color: $blue
+	&-gray
+		color: $gray-dark
+	&-link
+		color: $link
+	&-purple
+		color: $purple  
+
+.bg
+	&-blue
+		background: $blue
+		&-opacity
+			background: rgba($blue, .1)
+	&-purple
+		background: $purple
+		&-opacity
+			background: rgba($purple, .1)
+	&-orange
+		background: $orange 
+	&-pink
+		background: $pink
+	&-green
+		background: $green 
+
+.text
+	&-right
+		text-align: right
+	&-center
+		text-align: center
+	&-uppercase
+		text-transform: uppercase
+
+.m-auto
+	margin: auto
+.ml-auto
+	margin-left: auto
+.mr-auto
+	margin-right: auto
+
+.align
+	&-baseline
+		align-items: baseline
+
+.desktop
+	&-hide
+		+d
+			display: none
+	&-show
+		display: none
+		+d
+			display: block
+	&-text-right
+		+d
+			text-align: right
+
+.tablet
+	&-hide
+		+t
+			display: none
+	&-show
+		display: none
+		+t
+			display: block
+	&-text-right
+		+t
+			text-align: right
+			
+.mobile
+	&-hide
+		+m
+			display: none
+	&-show
+		display: none
+		+m
+			display: block
+	&-text-right
+		+m
+			text-align: right
+
+.title
+	font-size: 16px
+	line-height: (20/16)
+	font-weight: 600
+	&_lg,
+	&_md,
+	&_sm
+		+fp
+		font-weight: 600 
+		letter-spacing: -1px
+	&_lg
+		font-size: 96px
+		line-height: (120/96)
+	&_md
+		font-size: 72px
+		line-height: (88/72)
+	&_sm
+		font-size: 64px
+		line-height: (72/64)
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+	+fp
+
+.h1,
+.h2,
+.h3
+	font-weight: 600
+	letter-spacing: -1px
+
+.h4,
+.h5,
+.h6
+	font-weight: 500
+
+.h1
+	font-size: 56px
+	line-height: (64/56)
+	+x
+		font-size: 48px
+		line-height: (72/48)
+	+m
+		font-size: 40px
+		line-height: (60/40)
+
+.h2
+	font-size: 48px
+	line-height: (67/48) 
+	+m
+		font-size: 32px
+		line-height: (48/32)
+		letter-spacing: -.5px
+
+.h3
+	font-size: 40px
+	line-height: (56/40)
+
+.h4
+	font-size: 32px
+	line-height: (48/32)
+	letter-spacing: -.5px 
+
+.h5
+	font-size: 24px
+	line-height: (32/24)  
+
+.h6
+	font-size: 18px
+	line-height: (24/18)  
+	 
+.caption
+	font-size: 13px
+	font-weight: 500 
+	line-height: (18/13)
+
+.caption-sm
+	font-size: 12px
+	font-weight: 500 
+	line-height: (16/12)

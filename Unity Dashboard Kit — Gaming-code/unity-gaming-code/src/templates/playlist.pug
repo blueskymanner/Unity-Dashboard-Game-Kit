@@ -1,0 +1,136 @@
+---
+title: Playlist
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', 'active')
+		.page__wrapper
+			+header
+			.page__center
+				.player
+					.player__head
+						.player__box
+							.player__ava.online
+								img.player__photo(src="img/player-ava-1.png" alt="")
+							.player__desc
+								.player__stat
+									.player__stage.h5 Your Playlist 
+									.player__playlist
+										button.player__burger
+										.player__wrap
+											.player__top.h5 <span>🎮</span> Your Playlist
+											.player__group
+												a.player__game.active(href="#")
+													.player__ava.online
+														img.player__photo(src="img/player-ava-1.png" alt="")
+													.player__text League of Legends®
+												a.player__game(href="#")
+													.player__ava
+														img.player__photo(src="img/player-ava-2.png" alt="")
+													.player__text Call of Duty®
+												a.player__game(href="#")
+													.player__ava
+														img.player__photo(src="img/player-ava-3.png" alt="")
+													.player__text Fortnite®
+												a.player__game(href="#")
+													.player__ava.online
+														img.player__photo(src="img/player-ava-1.png" alt="")
+													.player__text League of Legends®
+												a.player__game(href="#")
+													.player__ava
+														img.player__photo(src="img/player-ava-2.png" alt="")
+													.player__text Call of Duty®
+												a.player__game(href="#")
+													.player__ava
+														img.player__photo(src="img/player-ava-3.png" alt="")
+													.player__text Fortnite®
+								.player__title.h2 League of Legends®
+								.player__note Live tournaments, match highlights, and your favorite pro players all in one place
+						.player__options
+							a.player__option(href="#")
+								+i('replay')
+								| Shuffle play
+							a.player__option(href="#")
+								+i('box')
+								| Delete
+					.player__wrapper
+						.player__container
+							.player__view(style="background-image: url('img/bg-player.png');")
+								.player__counter 24K Watching
+								button.player__toggle
+									+i('play')
+									+i('pause')
+								.player__control
+									.player__actions
+										button.player__action
+											+i('play')
+											+i('pause')
+										.player__volume
+											button.player__action
+												+i('sound-off')
+												+i('sound-on')
+											.player__line
+												.player__progress(style="width: 50%;")
+									.player__actions
+										button.player__action
+											+i('settings-fill')
+										button.player__action
+											+i('play-window')
+										button.player__action
+											+i('full-screen')
+							.player__body
+								.live.live_big Live
+								.player__info.h4 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs 
+								.player__parameters
+									.player__parameter
+										.player__icon
+											img.player__pic(src="img/league-of-legends.png" alt="")
+										.player__text League of Legends®
+									.player__parameter 🇺🇸 English
+						.player__list
+							a.player__preview(href="video-normal.html")
+								img.player__pic(src="img/player-pic-1.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-2.png" alt="")
+								.live Live
+							a.player__preview.online(href="video-normal.html")
+								img.player__pic(src="img/player-pic-3.png" alt="")
+							a.player__preview(href="video-normal.html")
+								img.player__pic(src="img/player-pic-4.png" alt="")
+							a.player__preview(href="video-normal.html")
+								img.player__pic(src="img/player-pic-1.png" alt="")
+							.player__preview
+								img.player__pic(src="img/player-pic-2.png" alt="")
+								.live Live
+							a.player__preview.online(href="video-normal.html")
+								img.player__pic(src="img/player-pic-3.png" alt="")
+							a.player__preview(href="video-normal.html")
+								img.player__pic(src="img/player-pic-4.png" alt="")
+						.player__arrows
+							button.player__arrow
+								+i('arrow-prev')
+							button.player__arrow
+								+i('arrow-next')
+				.games
+					.games__head
+						.games__title.h5 All Your Playlist
+						.games__field.field
+							.field__wrap
+								select.field__select
+									option Added Time
+									option New
+									option Free
+					.games__list
+						+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+						+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+						+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+						+gamesItem('img/game-4.png', 'Fortnite®', 'Shooting')
+						+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+						+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+						+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+						+gamesItem('img/game-4.png', 'Fortnite®', 'Shooting')
+					.games__btns
+						button.games__btn.btn.btn_gray.btn_wide Manage Your Playlist
+
+

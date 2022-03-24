@@ -1,0 +1,116 @@
+include _mixins
+doctype html
+html(lang="en")
+	head
+		include _head
+
+	body(class=bodyClass)
+		//- check dark mode
+		script.
+			console.log(localStorage.getItem('darkMode'));
+			if (localStorage.getItem('darkMode') === "on") {
+					document.body.classList.add("dark");
+					document.addEventListener("DOMContentLoaded", function() {
+					  document.querySelector('.js-switch-theme input').checked = true;
+					});
+			}
+			
+		block content
+		//- popup settings
+		.popup.popup_settings.mfp-hide#popup-settings
+			form.popup__form
+				.popup__title.h6 Account Settings
+				.popup__tags
+					a.popup__tag.active(href="#") Profile
+					a.popup__tag(href="#") Password
+					a.popup__tag(href="#") Email
+					a.popup__tag(href="#") Notification
+					a.popup__tag(href="#") Settings
+				.popup__field.field.mobile-show
+					.field__wrap
+						select.field__select
+							option Your Profile
+							option Password
+							option Channels
+							option Apps
+							option Data Export
+				.popup__user
+					.popup__title.h6.mobile-show Your Profile
+					.popup__category.caption-sm Your Avatar
+					.popup__line
+						.popup__ava
+							img.popup__pic(src="img/avatar.png" alt="")
+						.popup__details
+							.popup__btns
+								.popup__loading
+									input.popup__file(type="file")
+									button.popup__btn.btn.btn_purple Upload New
+								button.popup__btn.btn.btn_gray Delete Avatar
+							.popup__text Avatar help your teammates recognize you in Unity.
+				.popup__fieldset
+					.popup__row
+						.popup__field.field
+							.field__label Your Full Name
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Display Name
+							.field__wrap
+								input.field__input(type="text")
+					.popup__row
+						.popup__field.field
+							.field__label Role
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Location
+							.field__wrap
+								input.field__input(type="text")
+					.popup__row
+						.popup__field.field
+							.field__label Role
+							.field__wrap
+								input.field__input(type="text")
+						.popup__field.field
+							.field__label Team
+							.field__wrap
+								input.field__input(type="text")
+					.popup__field.field
+						.field__label Bio
+						.field__wrap
+							textarea.field__textarea
+				button.popup__btn.btn.btn_purple(type="submit") Update Profile
+		//- popup stories
+		.popup.popup_stories.mfp-hide#popup-stories
+			.stories
+				.stories__container
+					.stories__slider.js-slider-stories
+						mixin slide
+							.stories__slide
+								.stories__item(style="background-image: url('img/stories-pic.png');")
+									.stories__progress
+										.stories__line.active
+										.stories__line
+									a.stories__user(href="#")
+										.stories__ava
+											img.stories__pic(src="img/ava-1.png" alt="")
+										.stories__desc
+											.stories__man.confirm Tran Mau Tri Tam 
+											.stories__game Call of Duty
+											.status.orange 2.8K viewers
+									form.stories__form
+										input.stories__input(type="text" placeholder="Send a message…")
+										button.stories__btn.btn.btn_purple Send
+										button.stories__smile
+											+i('editor-smile')
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+						+slide
+		include ./_scripts

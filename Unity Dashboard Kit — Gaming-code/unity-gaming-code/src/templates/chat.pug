@@ -1,0 +1,281 @@
+---
+title: Chat
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('', '', '', '', '', '', 'active')
+		.page__wrapper
+			+header
+			.chat
+				.chat__sidebar
+					.chat__item.active
+						.chat__head Direct Message
+						.chat__body(style="display: block;")
+							a.chat__line(href='#')
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.chat__details
+									.chat__man Jesus Brown
+									.chat__time 3m ago
+								.chat__games
+									.chat__ava
+										img.chat__pic(src="img/player-ava-1.png" alt="")
+									.chat__counter.bg-orange 3
+							a.chat__line.active(href='#')
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.chat__details
+									.chat__man Jesus Brown
+									.chat__time 12m ago
+								.chat__games
+									.chat__ava
+										img.chat__pic(src="img/player-ava-2.png" alt="")
+									.chat__counter.bg-orange 6
+							a.chat__line(href='#')
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.chat__details
+									.chat__man Jesus Brown
+									.chat__time 20m ago
+								.chat__games
+									.chat__ava
+										img.chat__pic(src="img/player-ava-3.png" alt="")
+									.chat__counter.bg-orange 9
+							a.chat__line(href='#')
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.chat__details
+									.chat__man Jesus Brown
+									.chat__time 3m ago
+								.chat__games
+									.chat__ava
+										img.chat__pic(src="img/player-ava-1.png" alt="")
+									.chat__counter.bg-orange 4
+							a.chat__line(href='#')
+								.ava.ava_online
+									img.ava__pic(src="img/ava-1.png" alt="")
+								.chat__details
+									.chat__man Jesus Brown
+									.chat__time 13m ago
+								.chat__games
+									.chat__ava
+										img.chat__pic(src="img/player-ava-2.png" alt="")
+									.chat__counter.bg-orange 3
+					.chat__item.active
+						.chat__head Direct Message
+						.chat__body(style="display: block;")
+							a.chat__line(href='#')
+								.ava.ava_online-orange
+									img.ava__pic(src="img/player-ava-1.png" alt="")
+								.chat__details
+									.chat__man Call of Duty Group
+									.chat__time 2hrs ago
+								.chat__users
+									.chat__ava
+										img.chat__pic(src="img/ava-1.png" alt="")
+									.chat__ava
+										img.chat__pic(src="img/ava-2.png" alt="")
+									.chat__counter.bg-blue +9
+							a.chat__line(href='#')
+								.ava.ava_online-orange
+									img.ava__pic(src="img/player-ava-2.png" alt="")
+								.chat__details
+									.chat__man Call of Duty Group
+									.chat__time 5hrs ago
+								.chat__users
+									.chat__ava
+										img.chat__pic(src="img/ava-3.png" alt="")
+									.chat__ava
+										img.chat__pic(src="img/ava-4.png" alt="")
+									.chat__counter.bg-blue +8
+							a.chat__line(href='#')
+								.ava.ava_online-orange
+									img.ava__pic(src="img/player-ava-3.png" alt="")
+								.chat__details
+									.chat__man Call of Duty Group
+									.chat__time 11hrs ago
+								.chat__users
+									.chat__ava
+										img.chat__pic(src="img/ava-5.png" alt="")
+									.chat__ava
+										img.chat__pic(src="img/ava-1.png" alt="")
+									.chat__counter.bg-blue +3
+							a.chat__line(href='#')
+								.ava.ava_online-orange
+									img.ava__pic(src="img/player-ava-1.png" alt="")
+								.chat__details
+									.chat__man Call of Duty Group
+									.chat__time 2hrs ago
+								.chat__users
+									.chat__ava
+										img.chat__pic(src="img/ava-1.png" alt="")
+									.chat__ava
+										img.chat__pic(src="img/ava-2.png" alt="")
+									.chat__counter.bg-blue +9
+							a.chat__line(href='#')
+								.ava.ava_online-orange
+									img.ava__pic(src="img/player-ava-2.png" alt="")
+								.chat__details
+									.chat__man Call of Duty Group
+									.chat__time 5hrs ago
+								.chat__users
+									.chat__ava
+										img.chat__pic(src="img/ava-3.png" alt="")
+									.chat__ava
+										img.chat__pic(src="img/ava-4.png" alt="")
+									.chat__counter.bg-blue +8
+						.chat__btns
+							button.chat__btn.btn.btn_gray Create New Group Chat
+				.chat__container
+					.chat__top
+						.chat__info.h3.mr-auto Gavin Henry
+						.chat__actions
+							button.chat__action
+								+i('star-fill')
+							button.chat__action
+								+i('profile')
+							button.chat__action
+								+i('game-play')
+					.messages
+						.messages__list
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-1.png" alt="")
+								.messages__details
+									.messages__head
+										.messages__man Jesus Brown
+										.messages__time 🔥 3m ago
+									.messages__body
+										.messages__text Thank you, I have installed the plugin, I just need to wait until the file finishes downloading.
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+										.messages__text i get back to work now 
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-2.png" alt="")
+								.messages__details
+									.messages__head
+										.messages__man Dash UI8
+										.messages__time 🔥 3m ago
+									.messages__body
+										.messages__text @jesus. Hi there, Sent you a new video, check it out.
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+										.messages__text i get back to work now 
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+										.games
+											+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+											+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-3.png" alt="")
+								.messages__details
+									.messages__head
+										.messages__man Dash UI8
+										.messages__time 🔥 3m ago
+									.messages__body
+										.messages__text Wait a bit, let me check
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+										.messages__text i get back to work now 
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+									.player.player_sm
+										.player__container
+											.player__view(style="background-image: url('img/bg-player.png');")
+												button.player__toggle
+													+i('play')
+												.player__control
+													.player__actions
+														button.player__action
+															+i('play')
+															+i('pause')
+														.player__volume
+															button.player__action
+																+i('sound-off')
+																+i('sound-on')
+															.player__line
+																.player__progress(style="width: 50%;")
+													.player__actions
+														button.player__action
+															+i('settings-fill')
+														button.player__action
+															+i('play-window')
+														button.player__action
+															+i('full-screen')
+											.player__body
+												.live.live_big Live
+												.player__info.h6 Renegades vs Chiefs - ESL Pro League Season 16 - Playoffs 
+												.player__parameters
+													.player__parameter
+														.player__icon
+															img.player__pic(src="img/league-of-legends.png" alt="")
+														.player__text League of Legends®
+													.player__parameter 🇺🇸 English
+							.messages__item
+								.messages__ava
+									img.messages__pic(src="img/ava-4.png" alt="")
+								.messages__details
+									.messages__head
+										.messages__man Jesus Brown
+										.messages__time 🔥 3m ago
+									.messages__body
+										.messages__text Thank you, I have installed the plugin, I just need to wait until the file finishes downloading.
+											.messages__actions
+												button.messages__action
+													+i('smile')
+												button.messages__action
+													+i('bookmarks')
+												button.messages__action
+													+i('menu')
+						.editor
+							.editor__wrap
+								.editor__head
+									.editor__control
+										button.editor__action
+											+i('editor-smile')
+										button.editor__action.active
+											+i('editor-bold')
+										button.editor__action
+											+i('editor-italic')
+										button.editor__action
+											+i('editor-pic')
+									button.editor__add
+								.editor__body
+									.editor__field
+										textarea.editor__textarea(placeholder="text ...")
+							button.editor__btn.btn.btn_purple Reply Comment

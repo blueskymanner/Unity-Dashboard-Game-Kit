@@ -1,0 +1,51 @@
+---
+title: Sign in
+---
+extends layouts/_layout
+block content
+	.page.page_login
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.login(style="background-image: url('img/bg-sign-in.png');")
+				.login__container
+					.login__wrap
+						a.login__logo(href="index.html")
+							img.login__pic(src="img/logo-white.svg" alt="")
+						.login__info A Video Gaming Platfrom UI Kit
+						.games
+							+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+							+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+							+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+						a.login__add(href="#")
+							+i('add-square')
+							| Discover more
+						//- .login__flex
+						//- 	label.switch.switch_theme.js-switch-theme
+						//- 		input.switch__input(type="checkbox")
+						//- 		span.switch__in
+						//- 			span.switch__box
+						//- 			span.switch__icon
+						//- 				+i('moon')
+						//- 				+i('sun')
+						//- 	a.login__download(href="#")
+						//- 		+i('download')
+					.login__form
+						a.login__close.mobile-hide(href="index.html")
+							+i('remove')
+						.login__title.h3 Sign in
+						.login__line
+							.login__text New user?
+							a.login__link(href="#") Create an account
+						.field
+							.field__label Usename or email
+							.field__wrap
+								input.field__input(type="email")
+						.field
+							.field__label Password
+							.field__wrap
+								input.field__input(type="password")
+						button.login__btn.btn.btn_purple.btn_wide Continue
+						.login__or Or continue with
+						button.login__btn.btn.btn_blue.btn_wide Google
+

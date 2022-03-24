@@ -1,0 +1,70 @@
+---
+title: Browse
+---
+extends layouts/_layout
+block content
+	.page
+		+sidebar('active')
+		.page__wrapper
+			+header
+			.page__center
+				.page__title.h2 Browse
+				.page__search
+					.page__field
+						input.page__input(type="text" placeholder="Search")
+						button.page__open
+							+i('search')
+					.field
+						.field__wrap
+							select.field__select.blue
+								option Category
+								option Video
+					.page__btns
+						button.page__btn.btn.btn_purple Category
+						button.page__btn.btn.btn_white Video
+				.games
+					.games__list
+						+gamesItem('img/game-1.png', 'Call of Duty®', 'Shooting')
+						+gamesItem('img/game-2.png', 'The Dota 2', 'eSport')
+						+gamesItem('img/game-3.png', 'League of Legends®', 'Online Game')
+						+gamesItem('img/game-4.png', 'Fortnite®', 'Shooting')
+				+categories('Your search results')
+				.popular
+					.popular__head
+						.popular__title.h5 Recommended for you
+						.popular__field.field
+							.field__wrap
+								select.field__select
+									option Popular
+									option New
+									option Free
+					.popular__list
+						mixin popularItem(image)
+							a.popular__item(href='#')
+								.popular__preview(style="background-image: url(" + image + ");")
+									.popular__category Shooter
+								.popular__body
+									.popular__game.h6 Fortnite
+									.status.green 4.9K Viewers
+									.popular__btn
+										.popular__text-show Follow
+										.popular__text-hide Discover Now
+						+popularItem('img/popular-game-1.png')
+						+popularItem('img/popular-game-2.png')
+						+popularItem('img/popular-game-3.png')
+						+popularItem('img/popular-game-4.png')
+				+users('From Channels You Follow')
+				.collection
+					.collection__head
+						.collection__title.h5 Recommended Videos
+						.collection__field.field
+							.field__wrap
+								select.field__select
+									option Most Recent
+									option New
+									option Free
+					.collection__list
+						+card('img/card-pic-1.png', '2020 World Champs Gaming Warzone', 'img/ava-1.png', 'confirm', 'Tam Tran', 'Call of Duty®')
+						+card('img/card-pic-2.png', 'Team Flash vs. Saigon phantom', 'img/ava-2.png', 'confirm', 'Dash UI8', 'Garena of Valor')
+						+card('img/card-pic-3.png', '2020 World Champs Gaming Warzone', 'img/ava-3.png', 'confirm', 'UI8 Gaming', 'Call of Duty®')
+						+card('img/card-pic-4.png', '2020 World Champs Gaming Warzone', 'img/ava-4.png', '', 'Gabriel Erickson', 'Garena Free Fire')
